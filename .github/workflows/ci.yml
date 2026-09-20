@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ${{ fromJSON(vars.DINKSTER_TRAINING_RUNNER || '["self-hosted", "linux", "x64"]') }}
+    runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
       OMP_NUM_THREADS: "4"
