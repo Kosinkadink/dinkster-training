@@ -1,0 +1,45 @@
+[project]
+name = "dinkster-training-torch"
+version = "0.0.1"
+description = "Native SD1.5, SDXL, Flux, Wan, and MiniMax LoRA training runtime for Dinkster"
+requires-python = ">=3.12"
+dependencies = [
+    "av==16.0.1",
+    "dinkster-api",
+    "dinkster-inference",
+    "dinkster-inference-torch",
+    "dinkster-nodes-training",
+    "dinkster-server",
+    "pillow>=10",
+]
+
+# The workspace root remains torch-free. Runtime workers install this extra in
+# their dedicated torch environment.
+[project.optional-dependencies]
+torch = ["dinkster-inference-torch[torch]"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dinkster_training_torch"]
+
+[tool.uv.sources]
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "45e7fd13afd94ae40d4283a0b45764b24c1fcd94", subdirectory = "packages/dinkster-api" }
+dinkster-inference = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "45e7fd13afd94ae40d4283a0b45764b24c1fcd94", subdirectory = "packages/dinkster-inference" }
+dinkster-inference-torch = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "45e7fd13afd94ae40d4283a0b45764b24c1fcd94", subdirectory = "packages/dinkster-inference-torch" }
+dinkster-nodes-training = { workspace = true }
+dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "45e7fd13afd94ae40d4283a0b45764b24c1fcd94", subdirectory = "packages/dinkster-server" }
+
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "../.."
+venv = ".venv"
+include = ["src", "tests"]
+extraPaths = ["src"]
+typeCheckingMode = "strict"
+reportMissingTypeStubs = false
+reportUnknownMemberType = false
+reportUnknownVariableType = false
+reportUnknownArgumentType = false
