@@ -1,4 +1,5 @@
 name: ci
+run-name: ci with private Dinkster access
 
 on:
   pull_request:
