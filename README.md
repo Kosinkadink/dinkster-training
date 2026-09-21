@@ -7,6 +7,8 @@ runtime. The repository is a uv workspace containing:
 - `dinkster-training-worker`: isolated fake and torch backend selection.
 - `dinkster-training-torch`: native model training, datasets, checkpoints, and
   LoRA export.
+- `benchmarks/training-comparison`: retained SD1.5 and SDXL trainer comparisons,
+  reports, and collection tools.
 
 The lockfile pins every Dinkster dependency to one immutable Dinkster commit.
 This repository does not require a sibling checkout. From this repository:
