@@ -29,8 +29,8 @@ packages = ["src/dinkster_training_worker"]
 "src/dinkster_training_worker" = "dinkster_training_worker_pack/dinkster_training_worker"
 
 [tool.uv.sources]
-dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "45e7fd13afd94ae40d4283a0b45764b24c1fcd94", subdirectory = "packages/dinkster-api" }
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1", subdirectory = "packages/dinkster-api" }
 dinkster-nodes-training = { workspace = true }
-dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "45e7fd13afd94ae40d4283a0b45764b24c1fcd94", subdirectory = "packages/dinkster-server" }
+dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1", subdirectory = "packages/dinkster-server" }
 dinkster-training-torch = { workspace = true }
-dinkster-workers = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "45e7fd13afd94ae40d4283a0b45764b24c1fcd94", subdirectory = "packages/dinkster-workers" }
+dinkster-workers = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1", subdirectory = "packages/dinkster-workers" }
