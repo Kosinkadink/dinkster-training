@@ -17,7 +17,7 @@ dev = [
 members = ["packages/*"]
 
 [tool.uv.sources]
-dinkster = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1" }
+dinkster = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607" }
 dinkster-nodes-training = { workspace = true }
 dinkster-training-torch = { workspace = true }
 dinkster-training-worker = { workspace = true }

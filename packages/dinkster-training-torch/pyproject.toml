@@ -26,11 +26,11 @@ build-backend = "hatchling.build"
 packages = ["src/dinkster_training_torch"]
 
 [tool.uv.sources]
-dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1", subdirectory = "packages/dinkster-api" }
-dinkster-inference = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1", subdirectory = "packages/dinkster-inference" }
-dinkster-inference-torch = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1", subdirectory = "packages/dinkster-inference-torch" }
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-api" }
+dinkster-inference = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-inference" }
+dinkster-inference-torch = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-inference-torch" }
 dinkster-nodes-training = { workspace = true }
-dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "f75e22e8aa31975b400362ddea3cf249c5f5f4c1", subdirectory = "packages/dinkster-server" }
+dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-server" }
 
 [tool.pyright]
 pythonVersion = "3.12"
