@@ -1,0 +1,1077 @@
+{
+  "environment": {
+    "gpu_name_driver_memory_mib": "NVIDIA GeForce RTX 5060 Ti, 595.84, 16311",
+    "hostname": "5800XT1L",
+    "kernel": "7.0.0-29-generic",
+    "machine": "x86_64",
+    "storage_free_bytes": 840918523904,
+    "storage_free_bytes_at_collection": 840918278144
+  },
+  "generated_dataset": {
+    "files": [
+      {
+        "path": "1_compare/00.png",
+        "sha256": "6e1eb7fe8d24e00331c26ca048781ff48a0c241d99811e7250194e98f34dd295"
+      },
+      {
+        "path": "1_compare/00.txt",
+        "sha256": "7c21832e2d8cf6e2d8ac5ec950a57f6fc3152b61ed9983ce2e94720e25cc3225"
+      },
+      {
+        "path": "1_compare/01.png",
+        "sha256": "fb71e00ff764f0c4ce8e8d96741c466e14a79f755c6e4bb57eabc93b449a6f62"
+      },
+      {
+        "path": "1_compare/01.txt",
+        "sha256": "27622b90632919840a282ad1a557872d8686f8d58ad335d3b84cb74208f3d78e"
+      },
+      {
+        "path": "1_compare/02.png",
+        "sha256": "84021003c3fdf2869c466ba3ca4280f4624c35ba960eabf618a5d18abdb4b9d5"
+      },
+      {
+        "path": "1_compare/02.txt",
+        "sha256": "ad215d2957818f6e8268d80faa73eabab7f70d87e9984c28914209d49acfc23b"
+      },
+      {
+        "path": "1_compare/03.png",
+        "sha256": "3d4137c8a2054042f59e813e801f1a4cf8ccde395f6125d410045c422fcc6242"
+      },
+      {
+        "path": "1_compare/03.txt",
+        "sha256": "77766621756f74da9b0dfb12bb0342d8823f5f73dc6becb3ab40bc74679a297a"
+      },
+      {
+        "path": "1_compare/04.png",
+        "sha256": "aa4fb674b19c179e93c0a8478d93f18f285de6ab3a23a9f600fea40cdbbdaee6"
+      },
+      {
+        "path": "1_compare/04.txt",
+        "sha256": "7278cd256d4c420e0b541566fe6b7a8f3b3a81b87cc852b6bc779fce7731148f"
+      },
+      {
+        "path": "1_compare/05.png",
+        "sha256": "f8ef4ad365e28cd13893ba0f355a124d68fe5c99cea97fac0a04d9b59ced4f22"
+      },
+      {
+        "path": "1_compare/05.txt",
+        "sha256": "7a36526f2da91061979e7e237b04d74616f2b9c0767f8689a0adba355b391ad7"
+      },
+      {
+        "path": "1_compare/06.png",
+        "sha256": "02f8c36309bd92d1e7a61c4ee8924b886fbb8dd44b2008aff976cea00c557191"
+      },
+      {
+        "path": "1_compare/06.txt",
+        "sha256": "9455798c36dba3daf53185986f4f4497778d78471357b8e34a9d0092e7d26697"
+      },
+      {
+        "path": "1_compare/07.png",
+        "sha256": "029a76ce254e5988c98d6d6bc38b82f49f08766d037c0d356c027748ab154b65"
+      },
+      {
+        "path": "1_compare/07.txt",
+        "sha256": "f971484d0f2be7688944c3f23bd2b434e484aaf8721ce25aa5e7f0820efac102"
+      },
+      {
+        "path": "1_compare/08.png",
+        "sha256": "cf99b8162640151794609bb77942a2a5a0a7ff4f7b3fb73269a34c5f51208dba"
+      },
+      {
+        "path": "1_compare/08.txt",
+        "sha256": "d5776a9ccfb9fd57174b43f080d13e0b5913272d14fed2cf72828349dfa0502d"
+      },
+      {
+        "path": "1_compare/09.png",
+        "sha256": "21014d812829ee15f7e4f62bbe60a2ddfe2c4644bbe26b1036e96fdfaf18b0ed"
+      },
+      {
+        "path": "1_compare/09.txt",
+        "sha256": "fed8c675d1ae53134bcbdc41561928cc7df719aff7eae3b5d6b40f78f4bb2a99"
+      },
+      {
+        "path": "1_compare/10.png",
+        "sha256": "fe1c5d01c4704d1668ff258dc21529de78c2ade97fd405b5adbe8bdb414042a8"
+      },
+      {
+        "path": "1_compare/10.txt",
+        "sha256": "dd210dde270c3a532f234f0727447134d6688204a9e509f71cbda09d939c1e6a"
+      },
+      {
+        "path": "1_compare/11.png",
+        "sha256": "e967052d5f8698f0f903ac3f90b0823019dbe12bfdbe76005d394d5c01875d5b"
+      },
+      {
+        "path": "1_compare/11.txt",
+        "sha256": "d2404d4461dcfde5c7a3e10455f41ed2435345d8360431e8b926ca99c426b233"
+      },
+      {
+        "path": "1_compare/12.png",
+        "sha256": "87761ab016f430dce19162af738db0a98c58e7f6ccc6192cf0fb7f288c89edb8"
+      },
+      {
+        "path": "1_compare/12.txt",
+        "sha256": "c027699fe0cb60d7be7ae7d5f71ca77ece68a2bea569210b74be184a07104252"
+      },
+      {
+        "path": "1_compare/13.png",
+        "sha256": "004d63011beba3b497993b929130a71520c5f6a61aa62a5dbfd90d7a47adbebb"
+      },
+      {
+        "path": "1_compare/13.txt",
+        "sha256": "240c836b760be22e9653089852da9774ef00f32b2735d2aaaddfbde397a88539"
+      },
+      {
+        "path": "1_compare/14.png",
+        "sha256": "4db282fe65063083246e477afeafb954fd3ff74f2fba6fe640a7812425fa7c72"
+      },
+      {
+        "path": "1_compare/14.txt",
+        "sha256": "ef6b28ba63edb2345e4ab4c41f77b6264ef2f2002419d9566c6668400b99f438"
+      },
+      {
+        "path": "1_compare/15.png",
+        "sha256": "13d12e50600c6d1062107dd250bda764cdf3102c26b039a9e8c0a428d40173a5"
+      },
+      {
+        "path": "1_compare/15.txt",
+        "sha256": "b0a778028500f2cb46c5f3099ae99d9e4b32e0ec6edef7564c6e711422b5ac5f"
+      }
+    ],
+    "generator": "dinkster-training-comparison-synthetic-v1",
+    "image_count": 16,
+    "resolution": [
+      512,
+      512
+    ]
+  },
+  "model": {
+    "bytes": 4265146304,
+    "sha256": "6ce0161689b3853acaa03779ec93eafe75a02f4ced659bee03f50797806fa2fa",
+    "url": "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/c36740b77a55ec396ace7c8c26589cdf2b4bc3da/v1-5-pruned-emaonly.safetensors"
+  },
+  "python_versions": {
+    "ai_toolkit": "3.12.3",
+    "dinkster": "3.12.3",
+    "kohya": "3.12.3"
+  },
+  "references": {
+    "ai_toolkit": {
+      "commit": "27a03a91f23eb1b757d5ec2e80ee3e129cfcc350",
+      "url": "https://github.com/ostris/ai-toolkit.git"
+    },
+    "kohya": {
+      "commit": "37a1cbbc5725ed2a3575506e7bd2001c9908ac92",
+      "url": "https://github.com/kohya-ss/sd-scripts.git"
+    }
+  },
+  "sdxl": {
+    "auxiliary_artifacts": {
+      "ai_toolkit_pipeline_support": {
+        "base_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/462165984030d82259a11f4367a4eed129e94a7b/",
+        "files": [
+          {
+            "bytes": 609,
+            "path": "model_index.json",
+            "sha256": "6d7b93508390ab91ac5bfbe4aeb4dc2d83f7bb1b05fb069d714b5b0c75f70d44"
+          },
+          {
+            "bytes": 479,
+            "path": "scheduler/scheduler_config.json",
+            "sha256": "af3e45a949aff8b8341ab8b811429ec03fee857a700a1d9477363e4fff9666e2"
+          },
+          {
+            "bytes": 565,
+            "path": "text_encoder/config.json",
+            "sha256": "39b8b2e4b1949e36969caa425b6c81c68bace99198dd9078ce05d16ad401fe7f"
+          },
+          {
+            "bytes": 575,
+            "path": "text_encoder_2/config.json",
+            "sha256": "a892d1c3a69a7e9247a24de2bc1d5891e3109a54696e53be20093af671072c34"
+          },
+          {
+            "bytes": 524619,
+            "path": "tokenizer/merges.txt",
+            "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+          },
+          {
+            "bytes": 472,
+            "path": "tokenizer/special_tokens_map.json",
+            "sha256": "c4864a9376a8401918425bed71fc14fc0e81f9b59ec45c1cf96cccb2df508eac"
+          },
+          {
+            "bytes": 737,
+            "path": "tokenizer/tokenizer_config.json",
+            "sha256": "19d7b034cb0cc3ce9766c2231373ab8aa8991fc72e2c8f76558bfaae3de0d563"
+          },
+          {
+            "bytes": 1059962,
+            "path": "tokenizer/vocab.json",
+            "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349"
+          },
+          {
+            "bytes": 524619,
+            "path": "tokenizer_2/merges.txt",
+            "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+          },
+          {
+            "bytes": 460,
+            "path": "tokenizer_2/special_tokens_map.json",
+            "sha256": "f118ab3a983206e4f32583448de6bd6aae4ee21869135cef1f5848a753cdaab6"
+          },
+          {
+            "bytes": 725,
+            "path": "tokenizer_2/tokenizer_config.json",
+            "sha256": "c9d23941f76a41cbd50eda9290f57be7828f0a7a677939e9ef181f7e12bd1bdf"
+          },
+          {
+            "bytes": 1059962,
+            "path": "tokenizer_2/vocab.json",
+            "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349"
+          },
+          {
+            "bytes": 1680,
+            "path": "unet/config.json",
+            "sha256": "30ebc70750223e59006f7f2b4e1e6c102570aa19a9c4ae3e1fbe7591332dbae6"
+          },
+          {
+            "bytes": 642,
+            "path": "vae/config.json",
+            "sha256": "0b331c8ac22ded5f9997a144a575c1d113d6169aff262c353f39015bd24a6264"
+          },
+          {
+            "bytes": 607,
+            "path": "vae_1_0/config.json",
+            "sha256": "89a914a415bc3211fe15306c5b1d89774d928d6cc6c91dc8e86208710829355c"
+          },
+          {
+            "bytes": 607,
+            "path": "vae_decoder/config.json",
+            "sha256": "89a914a415bc3211fe15306c5b1d89774d928d6cc6c91dc8e86208710829355c"
+          },
+          {
+            "bytes": 607,
+            "path": "vae_encoder/config.json",
+            "sha256": "89a914a415bc3211fe15306c5b1d89774d928d6cc6c91dc8e86208710829355c"
+          }
+        ]
+      },
+      "kohya_openclip_tokenizer": {
+        "base_url": "https://huggingface.co/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k/resolve/743c27bd53dfe508a0ade0f50698f99b39d03bec/",
+        "files": [
+          {
+            "bytes": 524619,
+            "path": "merges.txt",
+            "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+          },
+          {
+            "bytes": 389,
+            "path": "special_tokens_map.json",
+            "sha256": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf"
+          },
+          {
+            "bytes": 2224041,
+            "path": "tokenizer.json",
+            "sha256": "b556ac8c99757ffb677208af34bc8c6721572114111a6e0aaf5fa69ff0b8d842"
+          },
+          {
+            "bytes": 904,
+            "path": "tokenizer_config.json",
+            "sha256": "e19f34ef773563fb695f96cfcae1e4c7b112ab6ad532f6962061df5242d924f0"
+          },
+          {
+            "bytes": 862328,
+            "path": "vocab.json",
+            "sha256": "5047b556ce86ccaf6aa22b3ffccfc52d391ea4accdab9c2f2407da5b742d4363"
+          }
+        ]
+      }
+    },
+    "environment": {
+      "gpu_name_driver_memory_mib": "NVIDIA GeForce RTX 5060 Ti, 595.84, 16311",
+      "hostname": "5800XT1L",
+      "kernel": "7.0.0-29-generic",
+      "machine": "x86_64",
+      "storage_free_bytes": 833941807104,
+      "storage_free_bytes_at_collection": 833456316416
+    },
+    "generated_dataset": {
+      "files": [
+        {
+          "path": "1_compare/00.png",
+          "sha256": "6e1eb7fe8d24e00331c26ca048781ff48a0c241d99811e7250194e98f34dd295"
+        },
+        {
+          "path": "1_compare/00.txt",
+          "sha256": "7c21832e2d8cf6e2d8ac5ec950a57f6fc3152b61ed9983ce2e94720e25cc3225"
+        },
+        {
+          "path": "1_compare/01.png",
+          "sha256": "fb71e00ff764f0c4ce8e8d96741c466e14a79f755c6e4bb57eabc93b449a6f62"
+        },
+        {
+          "path": "1_compare/01.txt",
+          "sha256": "27622b90632919840a282ad1a557872d8686f8d58ad335d3b84cb74208f3d78e"
+        },
+        {
+          "path": "1_compare/02.png",
+          "sha256": "84021003c3fdf2869c466ba3ca4280f4624c35ba960eabf618a5d18abdb4b9d5"
+        },
+        {
+          "path": "1_compare/02.txt",
+          "sha256": "ad215d2957818f6e8268d80faa73eabab7f70d87e9984c28914209d49acfc23b"
+        },
+        {
+          "path": "1_compare/03.png",
+          "sha256": "3d4137c8a2054042f59e813e801f1a4cf8ccde395f6125d410045c422fcc6242"
+        },
+        {
+          "path": "1_compare/03.txt",
+          "sha256": "77766621756f74da9b0dfb12bb0342d8823f5f73dc6becb3ab40bc74679a297a"
+        },
+        {
+          "path": "1_compare/04.png",
+          "sha256": "aa4fb674b19c179e93c0a8478d93f18f285de6ab3a23a9f600fea40cdbbdaee6"
+        },
+        {
+          "path": "1_compare/04.txt",
+          "sha256": "7278cd256d4c420e0b541566fe6b7a8f3b3a81b87cc852b6bc779fce7731148f"
+        },
+        {
+          "path": "1_compare/05.png",
+          "sha256": "f8ef4ad365e28cd13893ba0f355a124d68fe5c99cea97fac0a04d9b59ced4f22"
+        },
+        {
+          "path": "1_compare/05.txt",
+          "sha256": "7a36526f2da91061979e7e237b04d74616f2b9c0767f8689a0adba355b391ad7"
+        },
+        {
+          "path": "1_compare/06.png",
+          "sha256": "02f8c36309bd92d1e7a61c4ee8924b886fbb8dd44b2008aff976cea00c557191"
+        },
+        {
+          "path": "1_compare/06.txt",
+          "sha256": "9455798c36dba3daf53185986f4f4497778d78471357b8e34a9d0092e7d26697"
+        },
+        {
+          "path": "1_compare/07.png",
+          "sha256": "029a76ce254e5988c98d6d6bc38b82f49f08766d037c0d356c027748ab154b65"
+        },
+        {
+          "path": "1_compare/07.txt",
+          "sha256": "f971484d0f2be7688944c3f23bd2b434e484aaf8721ce25aa5e7f0820efac102"
+        },
+        {
+          "path": "1_compare/08.png",
+          "sha256": "cf99b8162640151794609bb77942a2a5a0a7ff4f7b3fb73269a34c5f51208dba"
+        },
+        {
+          "path": "1_compare/08.txt",
+          "sha256": "d5776a9ccfb9fd57174b43f080d13e0b5913272d14fed2cf72828349dfa0502d"
+        },
+        {
+          "path": "1_compare/09.png",
+          "sha256": "21014d812829ee15f7e4f62bbe60a2ddfe2c4644bbe26b1036e96fdfaf18b0ed"
+        },
+        {
+          "path": "1_compare/09.txt",
+          "sha256": "fed8c675d1ae53134bcbdc41561928cc7df719aff7eae3b5d6b40f78f4bb2a99"
+        },
+        {
+          "path": "1_compare/10.png",
+          "sha256": "fe1c5d01c4704d1668ff258dc21529de78c2ade97fd405b5adbe8bdb414042a8"
+        },
+        {
+          "path": "1_compare/10.txt",
+          "sha256": "dd210dde270c3a532f234f0727447134d6688204a9e509f71cbda09d939c1e6a"
+        },
+        {
+          "path": "1_compare/11.png",
+          "sha256": "e967052d5f8698f0f903ac3f90b0823019dbe12bfdbe76005d394d5c01875d5b"
+        },
+        {
+          "path": "1_compare/11.txt",
+          "sha256": "d2404d4461dcfde5c7a3e10455f41ed2435345d8360431e8b926ca99c426b233"
+        },
+        {
+          "path": "1_compare/12.png",
+          "sha256": "87761ab016f430dce19162af738db0a98c58e7f6ccc6192cf0fb7f288c89edb8"
+        },
+        {
+          "path": "1_compare/12.txt",
+          "sha256": "c027699fe0cb60d7be7ae7d5f71ca77ece68a2bea569210b74be184a07104252"
+        },
+        {
+          "path": "1_compare/13.png",
+          "sha256": "004d63011beba3b497993b929130a71520c5f6a61aa62a5dbfd90d7a47adbebb"
+        },
+        {
+          "path": "1_compare/13.txt",
+          "sha256": "240c836b760be22e9653089852da9774ef00f32b2735d2aaaddfbde397a88539"
+        },
+        {
+          "path": "1_compare/14.png",
+          "sha256": "4db282fe65063083246e477afeafb954fd3ff74f2fba6fe640a7812425fa7c72"
+        },
+        {
+          "path": "1_compare/14.txt",
+          "sha256": "ef6b28ba63edb2345e4ab4c41f77b6264ef2f2002419d9566c6668400b99f438"
+        },
+        {
+          "path": "1_compare/15.png",
+          "sha256": "13d12e50600c6d1062107dd250bda764cdf3102c26b039a9e8c0a428d40173a5"
+        },
+        {
+          "path": "1_compare/15.txt",
+          "sha256": "b0a778028500f2cb46c5f3099ae99d9e4b32e0ec6edef7564c6e711422b5ac5f"
+        }
+      ],
+      "generator": "dinkster-training-comparison-synthetic-v1",
+      "image_count": 16,
+      "resolution": [
+        512,
+        512
+      ]
+    },
+    "model": {
+      "bytes": 6938078334,
+      "family": "sdxl",
+      "sha256": "31e35c80fc4829d14f90153f4c74cd59c90b779f6afe05a74cd6120b893f7e5b",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/462165984030d82259a11f4367a4eed129e94a7b/sd_xl_base_1.0.safetensors"
+    },
+    "python_versions": {
+      "ai_toolkit": "3.12.3",
+      "dinkster": "3.12.3",
+      "kohya": "3.12.3"
+    },
+    "references": {
+      "ai_toolkit": {
+        "commit": "27a03a91f23eb1b757d5ec2e80ee3e129cfcc350",
+        "url": "https://github.com/ostris/ai-toolkit.git"
+      },
+      "kohya": {
+        "commit": "37a1cbbc5725ed2a3575506e7bd2001c9908ac92",
+        "url": "https://github.com/kohya-ss/sd-scripts.git"
+      }
+    },
+    "versions": {
+      "ai_toolkit": {
+        "ImageIO": "2.37.4",
+        "Jinja2": "3.1.6",
+        "Markdown": "3.10.3",
+        "MarkupSafe": "3.0.3",
+        "PyWavelets": "1.9.0",
+        "PyYAML": "6.0.3",
+        "Pygments": "2.21.0",
+        "Werkzeug": "3.1.8",
+        "absl-py": "2.5.0",
+        "accelerate": "1.14.0",
+        "albucore": "0.0.16",
+        "albumentations": "1.4.15",
+        "annotated-doc": "0.0.5",
+        "annotated-types": "0.8.0",
+        "antlr4-python3-runtime": "4.9.3",
+        "anyio": "4.14.2",
+        "audioread": "3.1.0",
+        "av": "16.0.1",
+        "bitsandbytes": "0.50.1",
+        "brotli": "1.2.0",
+        "certifi": "2026.7.22",
+        "cffi": "2.1.1",
+        "charset-normalizer": "3.5.1",
+        "click": "8.4.2",
+        "contourpy": "1.3.3",
+        "controlnet_aux": "0.0.10",
+        "cuda-bindings": "13.3.1",
+        "cuda-pathfinder": "1.6.0",
+        "cuda-toolkit": "13.0.3.0",
+        "cycler": "0.12.1",
+        "decorator": "5.3.1",
+        "diffusers": "0.39.0.dev0",
+        "einops": "0.8.2",
+        "eval_type_backport": "0.4.0",
+        "fastapi": "0.141.1",
+        "filelock": "3.32.3",
+        "flatten-json": "0.1.14",
+        "fonttools": "4.63.0",
+        "fsspec": "2026.7.0",
+        "ftfy": "6.3.1",
+        "gradio": "6.25.0",
+        "gradio_client": "2.6.0",
+        "groovy": "0.1.2",
+        "grpcio": "1.83.0",
+        "h11": "0.16.0",
+        "hf-gradio": "0.4.1",
+        "hf-xet": "1.6.0",
+        "hf_transfer": "0.1.9",
+        "httpcore": "1.0.9",
+        "httpx": "0.28.1",
+        "huggingface_hub": "1.23.0",
+        "idna": "3.19",
+        "importlib_metadata": "9.0.0",
+        "invisible-watermark": "0.2.0",
+        "joblib": "1.5.3",
+        "kiwisolver": "1.5.0",
+        "kornia": "0.8.3",
+        "kornia_rs": "0.1.14",
+        "lazy-loader": "0.5",
+        "librosa": "0.11.0",
+        "llvmlite": "0.49.0",
+        "lpips": "0.1.4",
+        "lycoris_lora": "1.8.3",
+        "markdown-it-py": "4.2.0",
+        "matplotlib": "3.10.1",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "msgpack": "1.2.1",
+        "mutagen": "1.47.0",
+        "narwhals": "2.25.0",
+        "networkx": "3.6.1",
+        "ninja": "1.13.0",
+        "numba": "0.67.0",
+        "numpy": "1.26.4",
+        "nvidia-cublas": "13.1.1.3",
+        "nvidia-cuda-cupti": "13.0.85",
+        "nvidia-cuda-nvrtc": "13.0.88",
+        "nvidia-cuda-runtime": "13.0.96",
+        "nvidia-cudnn-cu13": "9.20.0.48",
+        "nvidia-cufft": "12.0.0.61",
+        "nvidia-cufile": "1.15.1.6",
+        "nvidia-curand": "10.4.0.35",
+        "nvidia-cusolver": "12.0.4.66",
+        "nvidia-cusparse": "12.6.3.3",
+        "nvidia-cusparselt-cu13": "0.8.1",
+        "nvidia-nccl-cu13": "2.29.7",
+        "nvidia-nvjitlink": "13.3.33",
+        "nvidia-nvshmem-cu13": "3.4.5",
+        "nvidia-nvtx": "13.0.85",
+        "omegaconf": "2.3.1",
+        "open_clip_torch": "3.3.0",
+        "opencv-python": "4.11.0.86",
+        "opencv-python-headless": "4.11.0.86",
+        "optimum-quanto": "0.2.4",
+        "orjson": "3.12.0",
+        "oyaml": "1.0",
+        "packaging": "26.3",
+        "pandas": "3.0.5",
+        "peft": "0.18.1",
+        "pillow": "12.3.0",
+        "platformdirs": "4.11.3",
+        "pooch": "1.9.0",
+        "prodigyopt": "1.1.2",
+        "protobuf": "7.36.0",
+        "psutil": "7.2.2",
+        "pycparser": "3.0",
+        "pydantic": "2.13.4",
+        "pydantic_core": "2.46.4",
+        "pydub": "0.25.1",
+        "pyparsing": "3.3.2",
+        "python-dateutil": "2.9.0.post0",
+        "python-dotenv": "1.2.3",
+        "python-multipart": "0.0.32",
+        "python-slugify": "8.0.4",
+        "pytorch-fid": "0.3.0",
+        "pytorch-wavelets": "1.3.0",
+        "pytz": "2026.3.post1",
+        "regex": "2026.7.19",
+        "requests": "2.34.2",
+        "rich": "15.0.0",
+        "safehttpx": "0.1.7",
+        "safetensors": "0.8.0",
+        "scikit-image": "0.26.0",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.12.0",
+        "semantic-version": "2.10.0",
+        "sentencepiece": "0.2.2",
+        "setuptools": "78.1.0",
+        "shellingham": "1.5.4",
+        "six": "1.17.0",
+        "soundfile": "0.14.0",
+        "soxr": "1.1.0",
+        "starlette": "1.6.0",
+        "sympy": "1.14.0",
+        "tensorboard": "2.21.0",
+        "tensorboard-data-server": "0.7.2",
+        "text-unidecode": "1.3",
+        "threadpoolctl": "3.6.0",
+        "tifffile": "2026.3.3",
+        "timm": "1.0.22",
+        "tokenizers": "0.22.2",
+        "toml": "0.10.2",
+        "tomlkit": "0.14.0",
+        "torch": "2.13.0+cu130",
+        "torchao": "0.10.0",
+        "torchaudio": "2.11.0+cu130",
+        "torchcodec": "0.9.1",
+        "torchvision": "0.28.0+cu130",
+        "tqdm": "4.70.0",
+        "transformers": "5.5.3",
+        "triton": "3.7.1",
+        "typer": "0.27.1",
+        "typing-inspection": "0.4.4",
+        "typing_extensions": "4.16.0",
+        "urllib3": "2.7.0",
+        "uvicorn": "0.52.4",
+        "wcwidth": "0.8.2",
+        "zipp": "4.1.0"
+      },
+      "dinkster": {
+        "Jinja2": "3.1.6",
+        "MarkupSafe": "3.0.3",
+        "Pygments": "2.21.0",
+        "aiohappyeyeballs": "2.7.1",
+        "aiohttp": "3.14.3",
+        "aiosignal": "1.4.0",
+        "attrs": "26.1.0",
+        "blake3": "1.0.9",
+        "comfy-aimdo": "0.4.13",
+        "comfy-kitchen": "0.2.31",
+        "cuda-bindings": "13.3.1",
+        "cuda-pathfinder": "1.6.0",
+        "cuda-toolkit": "13.0.3.0",
+        "dinkster-api": "0.0.1",
+        "dinkster-assets": "0.0.1",
+        "dinkster-caches": "0.0.1",
+        "dinkster-engine": "0.0.1",
+        "dinkster-graph": "0.0.1",
+        "dinkster-inference": "0.0.1",
+        "dinkster-inference-torch": "0.0.1",
+        "dinkster-memory": "0.0.1",
+        "dinkster-nodes-training": "0.0.1",
+        "dinkster-protocol": "0.0.1",
+        "dinkster-schema": "0.0.1",
+        "dinkster-server": "0.0.1",
+        "dinkster-training-torch": "0.0.1",
+        "dinkster-values": "0.0.1",
+        "filelock": "3.32.3",
+        "frozenlist": "1.8.0",
+        "fsspec": "2026.7.0",
+        "idna": "3.19",
+        "iniconfig": "2.3.0",
+        "mpmath": "1.3.0",
+        "multidict": "6.7.1",
+        "networkx": "3.6.1",
+        "numpy": "2.5.2",
+        "nvidia-cublas": "13.1.1.3",
+        "nvidia-cuda-cupti": "13.0.85",
+        "nvidia-cuda-nvrtc": "13.0.88",
+        "nvidia-cuda-runtime": "13.0.96",
+        "nvidia-cudnn-cu13": "9.20.0.48",
+        "nvidia-cufft": "12.0.0.61",
+        "nvidia-cufile": "1.15.1.6",
+        "nvidia-curand": "10.4.0.35",
+        "nvidia-cusolver": "12.0.4.66",
+        "nvidia-cusparse": "12.6.3.3",
+        "nvidia-cusparselt-cu13": "0.8.1",
+        "nvidia-nccl-cu13": "2.29.7",
+        "nvidia-nvjitlink": "13.3.33",
+        "nvidia-nvshmem-cu13": "3.4.5",
+        "nvidia-nvtx": "13.0.85",
+        "packaging": "26.3",
+        "pillow": "12.3.0",
+        "pluggy": "1.6.0",
+        "propcache": "0.5.2",
+        "pytest": "9.1.1",
+        "scipy": "1.18.0",
+        "setuptools": "78.1.0",
+        "sympy": "1.14.0",
+        "torch": "2.13.0+cu130",
+        "torchsde": "0.2.6",
+        "tqdm": "4.70.0",
+        "trampoline": "0.1.2",
+        "triton": "3.7.1",
+        "typing_extensions": "4.16.0",
+        "yarl": "1.24.5"
+      },
+      "kohya": {
+        "Jinja2": "3.1.6",
+        "Markdown": "3.10.3",
+        "MarkupSafe": "3.0.3",
+        "PyYAML": "6.0.3",
+        "Pygments": "2.21.0",
+        "Werkzeug": "3.1.8",
+        "absl-py": "2.5.0",
+        "accelerate": "1.6.0",
+        "bitsandbytes": "0.50.1",
+        "certifi": "2026.7.22",
+        "charset-normalizer": "3.5.1",
+        "cuda-bindings": "13.3.1",
+        "cuda-pathfinder": "1.6.0",
+        "cuda-toolkit": "13.0.3.0",
+        "diffusers": "0.32.1",
+        "einops": "0.7.0",
+        "filelock": "3.32.3",
+        "fsspec": "2026.7.0",
+        "ftfy": "6.3.1",
+        "grpcio": "1.83.0",
+        "hf-xet": "1.6.0",
+        "huggingface-hub": "0.34.3",
+        "idna": "3.19",
+        "imagesize": "1.4.1",
+        "importlib_metadata": "9.0.0",
+        "library": "0.0.0",
+        "lion-pytorch": "0.2.3",
+        "markdown-it-py": "4.2.0",
+        "mdurl": "0.1.2",
+        "mpmath": "1.3.0",
+        "networkx": "3.6.1",
+        "numpy": "2.5.2",
+        "nvidia-cublas": "13.1.1.3",
+        "nvidia-cuda-cupti": "13.0.85",
+        "nvidia-cuda-nvrtc": "13.0.88",
+        "nvidia-cuda-runtime": "13.0.96",
+        "nvidia-cudnn-cu13": "9.20.0.48",
+        "nvidia-cufft": "12.0.0.61",
+        "nvidia-cufile": "1.15.1.6",
+        "nvidia-curand": "10.4.0.35",
+        "nvidia-cusolver": "12.0.4.66",
+        "nvidia-cusparse": "12.6.3.3",
+        "nvidia-cusparselt-cu13": "0.8.1",
+        "nvidia-nccl-cu13": "2.29.7",
+        "nvidia-nvjitlink": "13.3.33",
+        "nvidia-nvshmem-cu13": "3.4.5",
+        "nvidia-nvtx": "13.0.85",
+        "opencv-python": "4.10.0.84",
+        "packaging": "26.3",
+        "pillow": "12.3.0",
+        "prodigy-plus-schedule-free": "1.9.2",
+        "prodigyopt": "1.1.2",
+        "protobuf": "7.36.0",
+        "psutil": "7.2.2",
+        "pytorch_optimizer": "3.10.0",
+        "regex": "2026.7.19",
+        "requests": "2.34.2",
+        "rich": "14.1.0",
+        "safetensors": "0.4.5",
+        "schedulefree": "1.4",
+        "sentencepiece": "0.2.1",
+        "setuptools": "78.1.0",
+        "sympy": "1.14.0",
+        "tensorboard": "2.21.0",
+        "tensorboard-data-server": "0.7.2",
+        "tokenizers": "0.21.4",
+        "toml": "0.10.2",
+        "torch": "2.13.0+cu130",
+        "torchvision": "0.28.0+cu130",
+        "tqdm": "4.70.0",
+        "transformers": "4.54.1",
+        "triton": "3.7.1",
+        "typing_extensions": "4.16.0",
+        "urllib3": "2.7.0",
+        "voluptuous": "0.15.2",
+        "wcwidth": "0.8.2",
+        "zipp": "4.1.0"
+      }
+    }
+  },
+  "versions": {
+    "ai_toolkit": {
+      "ImageIO": "2.37.4",
+      "Jinja2": "3.1.6",
+      "Markdown": "3.10.3",
+      "MarkupSafe": "3.0.3",
+      "PyWavelets": "1.9.0",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "Werkzeug": "3.1.8",
+      "absl-py": "2.5.0",
+      "accelerate": "1.14.0",
+      "albucore": "0.0.16",
+      "albumentations": "1.4.15",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "antlr4-python3-runtime": "4.9.3",
+      "anyio": "4.14.2",
+      "audioread": "3.1.0",
+      "av": "16.0.1",
+      "bitsandbytes": "0.50.1",
+      "brotli": "1.2.0",
+      "certifi": "2026.7.22",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.1",
+      "click": "8.4.2",
+      "contourpy": "1.3.3",
+      "controlnet_aux": "0.0.10",
+      "cuda-bindings": "13.3.1",
+      "cuda-pathfinder": "1.6.0",
+      "cuda-toolkit": "13.0.3.0",
+      "cycler": "0.12.1",
+      "decorator": "5.3.1",
+      "diffusers": "0.39.0.dev0",
+      "einops": "0.8.2",
+      "eval_type_backport": "0.4.0",
+      "fastapi": "0.141.1",
+      "filelock": "3.32.3",
+      "flatten-json": "0.1.14",
+      "fonttools": "4.63.0",
+      "fsspec": "2026.7.0",
+      "ftfy": "6.3.1",
+      "gradio": "6.25.0",
+      "gradio_client": "2.6.0",
+      "groovy": "0.1.2",
+      "grpcio": "1.83.0",
+      "h11": "0.16.0",
+      "hf-gradio": "0.4.1",
+      "hf-xet": "1.6.0",
+      "hf_transfer": "0.1.9",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface_hub": "1.23.0",
+      "idna": "3.19",
+      "importlib_metadata": "9.0.0",
+      "invisible-watermark": "0.2.0",
+      "joblib": "1.5.3",
+      "kiwisolver": "1.5.0",
+      "kornia": "0.8.3",
+      "kornia_rs": "0.1.14",
+      "lazy-loader": "0.5",
+      "librosa": "0.11.0",
+      "llvmlite": "0.49.0",
+      "lpips": "0.1.4",
+      "lycoris_lora": "1.8.3",
+      "markdown-it-py": "4.2.0",
+      "matplotlib": "3.10.1",
+      "mdurl": "0.1.2",
+      "mpmath": "1.3.0",
+      "msgpack": "1.2.1",
+      "mutagen": "1.47.0",
+      "narwhals": "2.25.0",
+      "networkx": "3.6.1",
+      "ninja": "1.13.0",
+      "numba": "0.67.0",
+      "numpy": "1.26.4",
+      "nvidia-cublas": "13.1.1.3",
+      "nvidia-cuda-cupti": "13.0.85",
+      "nvidia-cuda-nvrtc": "13.0.88",
+      "nvidia-cuda-runtime": "13.0.96",
+      "nvidia-cudnn-cu13": "9.20.0.48",
+      "nvidia-cufft": "12.0.0.61",
+      "nvidia-cufile": "1.15.1.6",
+      "nvidia-curand": "10.4.0.35",
+      "nvidia-cusolver": "12.0.4.66",
+      "nvidia-cusparse": "12.6.3.3",
+      "nvidia-cusparselt-cu13": "0.8.1",
+      "nvidia-nccl-cu13": "2.29.7",
+      "nvidia-nvjitlink": "13.3.33",
+      "nvidia-nvshmem-cu13": "3.4.5",
+      "nvidia-nvtx": "13.0.85",
+      "omegaconf": "2.3.1",
+      "open_clip_torch": "3.3.0",
+      "opencv-python": "4.11.0.86",
+      "opencv-python-headless": "4.11.0.86",
+      "optimum-quanto": "0.2.4",
+      "orjson": "3.12.0",
+      "oyaml": "1.0",
+      "packaging": "26.3",
+      "pandas": "3.0.5",
+      "peft": "0.18.1",
+      "pillow": "12.3.0",
+      "platformdirs": "4.11.3",
+      "pooch": "1.9.0",
+      "prodigyopt": "1.1.2",
+      "protobuf": "7.36.0",
+      "psutil": "7.2.2",
+      "pycparser": "3.0",
+      "pydantic": "2.13.4",
+      "pydantic_core": "2.46.4",
+      "pydub": "0.25.1",
+      "pyparsing": "3.3.2",
+      "python-dateutil": "2.9.0.post0",
+      "python-dotenv": "1.2.3",
+      "python-multipart": "0.0.32",
+      "python-slugify": "8.0.4",
+      "pytorch-fid": "0.3.0",
+      "pytorch-wavelets": "1.3.0",
+      "pytz": "2026.3.post1",
+      "regex": "2026.7.19",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "safehttpx": "0.1.7",
+      "safetensors": "0.8.0",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.12.0",
+      "semantic-version": "2.10.0",
+      "sentencepiece": "0.2.2",
+      "setuptools": "78.1.0",
+      "shellingham": "1.5.4",
+      "six": "1.17.0",
+      "soundfile": "0.14.0",
+      "soxr": "1.1.0",
+      "starlette": "1.6.0",
+      "sympy": "1.14.0",
+      "tensorboard": "2.21.0",
+      "tensorboard-data-server": "0.7.2",
+      "text-unidecode": "1.3",
+      "threadpoolctl": "3.6.0",
+      "tifffile": "2026.3.3",
+      "timm": "1.0.22",
+      "tokenizers": "0.22.2",
+      "toml": "0.10.2",
+      "tomlkit": "0.14.0",
+      "torch": "2.13.0+cu130",
+      "torchao": "0.10.0",
+      "torchaudio": "2.11.0+cu130",
+      "torchcodec": "0.9.1",
+      "torchvision": "0.28.0+cu130",
+      "tqdm": "4.70.0",
+      "transformers": "5.5.3",
+      "triton": "3.7.1",
+      "typer": "0.27.1",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.7.0",
+      "uvicorn": "0.52.4",
+      "wcwidth": "0.8.2",
+      "zipp": "4.1.0"
+    },
+    "dinkster": {
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3",
+      "Pygments": "2.21.0",
+      "aiohappyeyeballs": "2.7.1",
+      "aiohttp": "3.14.3",
+      "aiosignal": "1.4.0",
+      "attrs": "26.1.0",
+      "blake3": "1.0.9",
+      "comfy-aimdo": "0.4.13",
+      "comfy-kitchen": "0.2.31",
+      "cuda-bindings": "13.3.1",
+      "cuda-pathfinder": "1.6.0",
+      "cuda-toolkit": "13.0.3.0",
+      "dinkster-api": "0.0.1",
+      "dinkster-assets": "0.0.1",
+      "dinkster-caches": "0.0.1",
+      "dinkster-engine": "0.0.1",
+      "dinkster-graph": "0.0.1",
+      "dinkster-inference": "0.0.1",
+      "dinkster-inference-torch": "0.0.1",
+      "dinkster-memory": "0.0.1",
+      "dinkster-nodes-training": "0.0.1",
+      "dinkster-protocol": "0.0.1",
+      "dinkster-schema": "0.0.1",
+      "dinkster-server": "0.0.1",
+      "dinkster-training-torch": "0.0.1",
+      "dinkster-values": "0.0.1",
+      "filelock": "3.32.3",
+      "frozenlist": "1.8.0",
+      "fsspec": "2026.7.0",
+      "idna": "3.19",
+      "iniconfig": "2.3.0",
+      "mpmath": "1.3.0",
+      "multidict": "6.7.1",
+      "networkx": "3.6.1",
+      "numpy": "2.5.2",
+      "nvidia-cublas": "13.1.1.3",
+      "nvidia-cuda-cupti": "13.0.85",
+      "nvidia-cuda-nvrtc": "13.0.88",
+      "nvidia-cuda-runtime": "13.0.96",
+      "nvidia-cudnn-cu13": "9.20.0.48",
+      "nvidia-cufft": "12.0.0.61",
+      "nvidia-cufile": "1.15.1.6",
+      "nvidia-curand": "10.4.0.35",
+      "nvidia-cusolver": "12.0.4.66",
+      "nvidia-cusparse": "12.6.3.3",
+      "nvidia-cusparselt-cu13": "0.8.1",
+      "nvidia-nccl-cu13": "2.29.7",
+      "nvidia-nvjitlink": "13.3.33",
+      "nvidia-nvshmem-cu13": "3.4.5",
+      "nvidia-nvtx": "13.0.85",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pluggy": "1.6.0",
+      "propcache": "0.5.2",
+      "pytest": "9.1.1",
+      "scipy": "1.18.0",
+      "setuptools": "78.1.0",
+      "sympy": "1.14.0",
+      "torch": "2.13.0+cu130",
+      "torchsde": "0.2.6",
+      "tqdm": "4.70.0",
+      "trampoline": "0.1.2",
+      "triton": "3.7.1",
+      "typing_extensions": "4.16.0",
+      "yarl": "1.24.5"
+    },
+    "kohya": {
+      "Jinja2": "3.1.6",
+      "Markdown": "3.10.3",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "Werkzeug": "3.1.8",
+      "absl-py": "2.5.0",
+      "accelerate": "1.6.0",
+      "bitsandbytes": "0.50.1",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "cuda-bindings": "13.3.1",
+      "cuda-pathfinder": "1.6.0",
+      "cuda-toolkit": "13.0.3.0",
+      "diffusers": "0.32.1",
+      "einops": "0.7.0",
+      "filelock": "3.32.3",
+      "fsspec": "2026.7.0",
+      "ftfy": "6.3.1",
+      "grpcio": "1.83.0",
+      "hf-xet": "1.6.0",
+      "huggingface-hub": "0.34.3",
+      "idna": "3.19",
+      "imagesize": "1.4.1",
+      "importlib_metadata": "9.0.0",
+      "library": "0.0.0",
+      "lion-pytorch": "0.2.3",
+      "markdown-it-py": "4.2.0",
+      "mdurl": "0.1.2",
+      "mpmath": "1.3.0",
+      "networkx": "3.6.1",
+      "numpy": "2.5.2",
+      "nvidia-cublas": "13.1.1.3",
+      "nvidia-cuda-cupti": "13.0.85",
+      "nvidia-cuda-nvrtc": "13.0.88",
+      "nvidia-cuda-runtime": "13.0.96",
+      "nvidia-cudnn-cu13": "9.20.0.48",
+      "nvidia-cufft": "12.0.0.61",
+      "nvidia-cufile": "1.15.1.6",
+      "nvidia-curand": "10.4.0.35",
+      "nvidia-cusolver": "12.0.4.66",
+      "nvidia-cusparse": "12.6.3.3",
+      "nvidia-cusparselt-cu13": "0.8.1",
+      "nvidia-nccl-cu13": "2.29.7",
+      "nvidia-nvjitlink": "13.3.33",
+      "nvidia-nvshmem-cu13": "3.4.5",
+      "nvidia-nvtx": "13.0.85",
+      "opencv-python": "4.10.0.84",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "prodigy-plus-schedule-free": "1.9.2",
+      "prodigyopt": "1.1.2",
+      "protobuf": "7.36.0",
+      "psutil": "7.2.2",
+      "pytorch_optimizer": "3.10.0",
+      "regex": "2026.7.19",
+      "requests": "2.34.2",
+      "rich": "14.1.0",
+      "safetensors": "0.4.5",
+      "schedulefree": "1.4",
+      "sentencepiece": "0.2.1",
+      "setuptools": "78.1.0",
+      "sympy": "1.14.0",
+      "tensorboard": "2.21.0",
+      "tensorboard-data-server": "0.7.2",
+      "tokenizers": "0.21.4",
+      "toml": "0.10.2",
+      "torch": "2.13.0+cu130",
+      "torchvision": "0.28.0+cu130",
+      "tqdm": "4.70.0",
+      "transformers": "4.54.1",
+      "triton": "3.7.1",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.7.0",
+      "voluptuous": "0.15.2",
+      "wcwidth": "0.8.2",
+      "zipp": "4.1.0"
+    }
+  }
+}

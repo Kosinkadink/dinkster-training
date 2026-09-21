@@ -1,0 +1,833 @@
+{
+  "adapter_delta_statistics": {
+    "cross_attention": {
+      "alpha": {
+        "count": 280,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "alpha_tensor_present": {
+        "count": 280,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "applied_delta_rms": {
+        "count": 280,
+        "max": 0.0001176954829134047,
+        "mean": 6.542259865065197e-05,
+        "median": 6.862609370728023e-05,
+        "min": 1.942527524079196e-05,
+        "p25": 4.376735796540743e-05,
+        "p75": 8.441015779681038e-05,
+        "p95": 0.00010104277862410527,
+        "zero_count": 0
+      },
+      "down_rms": {
+        "count": 280,
+        "max": 0.023575888946652412,
+        "mean": 0.01532502632388579,
+        "median": 0.015119140036404133,
+        "min": 0.012701017782092094,
+        "p25": 0.013160315807908773,
+        "p75": 0.016516658943146467,
+        "p95": 0.022931521758437157,
+        "zero_count": 0
+      },
+      "effective_scale": {
+        "count": 280,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "normalized_delta_rms": {
+        "count": 280,
+        "max": 0.0001176954829134047,
+        "mean": 6.542259865065197e-05,
+        "median": 6.862609370728023e-05,
+        "min": 1.942527524079196e-05,
+        "p25": 4.376735796540743e-05,
+        "p75": 8.441015779681038e-05,
+        "p95": 0.00010104277862410527,
+        "zero_count": 0
+      },
+      "rank": {
+        "count": 280,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "up_rms": {
+        "count": 280,
+        "max": 0.0031638466753065586,
+        "mean": 0.001997417354141362,
+        "median": 0.002044734312221408,
+        "min": 0.0006035355036146939,
+        "p25": 0.001478849386330694,
+        "p75": 0.002463991811964661,
+        "p95": 0.0027941120672039695,
+        "zero_count": 0
+      }
+    },
+    "feed_forward": {
+      "alpha": {
+        "count": 140,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "alpha_tensor_present": {
+        "count": 140,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "applied_delta_rms": {
+        "count": 140,
+        "max": 0.0001335457491222769,
+        "mean": 6.487057455940105e-05,
+        "median": 6.006451621942688e-05,
+        "min": 3.1690778996562585e-05,
+        "p25": 5.123367827764014e-05,
+        "p75": 7.910048771009315e-05,
+        "p95": 0.00010049327720480502,
+        "zero_count": 0
+      },
+      "down_rms": {
+        "count": 140,
+        "max": 0.023979956284165382,
+        "mean": 0.013542263589001128,
+        "median": 0.014342270325869322,
+        "min": 0.008330115117132664,
+        "p25": 0.008783169090747833,
+        "p75": 0.017030846793204546,
+        "p95": 0.023338144924491645,
+        "zero_count": 0
+      },
+      "effective_scale": {
+        "count": 140,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "normalized_delta_rms": {
+        "count": 140,
+        "max": 0.0001335457491222769,
+        "mean": 6.487057455940105e-05,
+        "median": 6.006451621942688e-05,
+        "min": 3.1690778996562585e-05,
+        "p25": 5.123367827764014e-05,
+        "p75": 7.910048771009315e-05,
+        "p95": 0.00010049327720480502,
+        "zero_count": 0
+      },
+      "rank": {
+        "count": 140,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "up_rms": {
+        "count": 140,
+        "max": 0.0031018860172480345,
+        "mean": 0.0022414603046075044,
+        "median": 0.002225997159257531,
+        "min": 0.0015697930939495564,
+        "p25": 0.002003759436774999,
+        "p75": 0.002463510201778263,
+        "p95": 0.002774685760959983,
+        "zero_count": 0
+      }
+    },
+    "self_attention": {
+      "alpha": {
+        "count": 280,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "alpha_tensor_present": {
+        "count": 280,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "applied_delta_rms": {
+        "count": 280,
+        "max": 0.00011997002002317458,
+        "mean": 7.439280058991114e-05,
+        "median": 7.627460945514031e-05,
+        "min": 3.85995335818734e-05,
+        "p25": 5.8315521528129466e-05,
+        "p75": 8.910225733416155e-05,
+        "p95": 0.00010212176857749002,
+        "zero_count": 0
+      },
+      "down_rms": {
+        "count": 280,
+        "max": 0.023842034861445427,
+        "mean": 0.0175411001712616,
+        "median": 0.01663942076265812,
+        "min": 0.01608710177242756,
+        "p25": 0.01642920868471265,
+        "p75": 0.016893711872398853,
+        "p95": 0.023270073998719453,
+        "zero_count": 0
+      },
+      "effective_scale": {
+        "count": 280,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "normalized_delta_rms": {
+        "count": 280,
+        "max": 0.00011997002002317458,
+        "mean": 7.439280058991114e-05,
+        "median": 7.627460945514031e-05,
+        "min": 3.85995335818734e-05,
+        "p25": 5.8315521528129466e-05,
+        "p75": 8.910225733416155e-05,
+        "p95": 0.00010212176857749002,
+        "zero_count": 0
+      },
+      "rank": {
+        "count": 280,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "up_rms": {
+        "count": 280,
+        "max": 0.0028723140712827444,
+        "mean": 0.0020291502155097467,
+        "median": 0.002098043798469007,
+        "min": 0.0011812695302069187,
+        "p25": 0.0016410085081588477,
+        "p75": 0.002335691300686449,
+        "p95": 0.0026268896879628302,
+        "zero_count": 0
+      }
+    },
+    "spatial_projection": {
+      "alpha": {
+        "count": 22,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "alpha_tensor_present": {
+        "count": 22,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "applied_delta_rms": {
+        "count": 22,
+        "max": 0.00011907120642717928,
+        "mean": 8.876236775408456e-05,
+        "median": 8.774844172876328e-05,
+        "min": 5.8904279285343364e-05,
+        "p25": 8.099232582026161e-05,
+        "p75": 9.53137732722098e-05,
+        "p95": 0.00010779463482322172,
+        "zero_count": 0
+      },
+      "down_rms": {
+        "count": 22,
+        "max": 0.023713383823633194,
+        "mean": 0.01972082562067292,
+        "median": 0.01715556625276804,
+        "min": 0.01646684855222702,
+        "p25": 0.016699184197932482,
+        "p75": 0.02320924075320363,
+        "p95": 0.023495008517056704,
+        "zero_count": 0
+      },
+      "effective_scale": {
+        "count": 22,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p25": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "zero_count": 0
+      },
+      "normalized_delta_rms": {
+        "count": 22,
+        "max": 0.00011907120642717928,
+        "mean": 8.876236775408456e-05,
+        "median": 8.774844172876328e-05,
+        "min": 5.8904279285343364e-05,
+        "p25": 8.099232582026161e-05,
+        "p75": 9.53137732722098e-05,
+        "p95": 0.00010779463482322172,
+        "zero_count": 0
+      },
+      "rank": {
+        "count": 22,
+        "max": 4.0,
+        "mean": 4.0,
+        "median": 4.0,
+        "min": 4.0,
+        "p25": 4.0,
+        "p75": 4.0,
+        "p95": 4.0,
+        "zero_count": 0
+      },
+      "up_rms": {
+        "count": 22,
+        "max": 0.0028498980682343245,
+        "mean": 0.002171553179240701,
+        "median": 0.0021498423302546144,
+        "min": 0.0017318448517471552,
+        "p25": 0.0019312869117129594,
+        "p75": 0.0023994309012778103,
+        "p95": 0.002575016522314399,
+        "zero_count": 0
+      }
+    }
+  },
+  "adapter_sha256": "6a726680f4209d21dfd889b4bfdf594317cd0b602500346e1f1d29a877867eb3",
+  "base_dtype": "bfloat16",
+  "deterministic_algorithms": true,
+  "export_audit": {
+    "family_audits": {
+      "cross_attention": {
+        "alpha": 4.0,
+        "alpha_tensor_present": true,
+        "effective_scale": 1.0,
+        "matches": true,
+        "module_count": 280,
+        "rank": 4.0
+      },
+      "feed_forward": {
+        "alpha": 4.0,
+        "alpha_tensor_present": true,
+        "effective_scale": 1.0,
+        "matches": true,
+        "module_count": 140,
+        "rank": 4.0
+      },
+      "self_attention": {
+        "alpha": 4.0,
+        "alpha_tensor_present": true,
+        "effective_scale": 1.0,
+        "matches": true,
+        "module_count": 280,
+        "rank": 4.0
+      },
+      "spatial_projection": {
+        "alpha": 4.0,
+        "alpha_tensor_present": true,
+        "effective_scale": 1.0,
+        "matches": true,
+        "module_count": 22,
+        "rank": 4.0
+      }
+    },
+    "matches": true,
+    "metadata": {
+      "dinkster_runtime_identity": "dinkster-sdxl-training-comparison",
+      "dinkster_step_cursor": "200"
+    },
+    "metadata_matches": true
+  },
+  "gradient_checkpointing": true,
+  "loss_summary": {
+    "count": 200,
+    "first_window_mean": 0.029074298031628133,
+    "last_window_mean": 0.020005688595119864,
+    "non_worsening": true,
+    "normalized_change": -0.3119115524867733
+  },
+  "losses": [
+    0.024297356605529785,
+    0.04087330400943756,
+    0.006877430249005556,
+    0.024812588468194008,
+    0.04476729780435562,
+    0.016815751791000366,
+    0.04112274944782257,
+    0.019390461966395378,
+    0.07764707505702972,
+    0.0033342228271067142,
+    0.008838539943099022,
+    0.016074590384960175,
+    0.022348588332533836,
+    0.01923084631562233,
+    0.012730428948998451,
+    0.12852145731449127,
+    0.021688086912035942,
+    0.04412408173084259,
+    0.011318294331431389,
+    0.022140519693493843,
+    0.006308466196060181,
+    0.03689519315958023,
+    0.019214056432247162,
+    0.016469523310661316,
+    0.03407340869307518,
+    0.019539685919880867,
+    0.04001178219914436,
+    0.041059404611587524,
+    0.037276286631822586,
+    0.07837852090597153,
+    0.009960087016224861,
+    0.022664526477456093,
+    0.028458883985877037,
+    0.035521820187568665,
+    0.045739807188510895,
+    0.02296179160475731,
+    0.009723580442368984,
+    0.019473019987344742,
+    0.008167972788214684,
+    0.024120431393384933,
+    0.031159041449427605,
+    0.030037052929401398,
+    0.021779421716928482,
+    0.02440708503127098,
+    0.020996682345867157,
+    0.004399233032017946,
+    0.02062884345650673,
+    0.02411755919456482,
+    0.021220721304416656,
+    0.027493927627801895,
+    0.017794571816921234,
+    0.006783084012567997,
+    0.05126709118485451,
+    0.013851881958544254,
+    0.004161283373832703,
+    0.019084546715021133,
+    0.01852801814675331,
+    0.02668038383126259,
+    0.012906204909086227,
+    0.056357093155384064,
+    0.02842576988041401,
+    0.008741678670048714,
+    0.03545035421848297,
+    0.02581663988530636,
+    0.0047944094985723495,
+    0.03462977334856987,
+    0.008006427437067032,
+    0.03396886587142944,
+    0.008044336922466755,
+    0.023202933371067047,
+    0.0259145088493824,
+    0.02220301516354084,
+    0.03749546781182289,
+    0.004423437640070915,
+    0.01738797500729561,
+    0.02981983684003353,
+    0.01943158358335495,
+    0.011087991297245026,
+    0.014092247933149338,
+    0.027131345123052597,
+    0.015512403100728989,
+    0.010030429810285568,
+    0.02805180475115776,
+    0.010953038930892944,
+    0.017692847177386284,
+    0.01609458029270172,
+    0.010000511072576046,
+    0.01101510040462017,
+    0.015490672551095486,
+    0.01017707772552967,
+    0.07137921452522278,
+    0.011855381540954113,
+    0.019780009984970093,
+    0.008318979293107986,
+    0.026691298931837082,
+    0.023643147200345993,
+    0.019461289048194885,
+    0.03324536234140396,
+    0.008543921634554863,
+    0.013081708922982216,
+    0.004601482767611742,
+    0.025414813309907913,
+    0.010867582634091377,
+    0.01580829732120037,
+    0.0183471217751503,
+    0.009835517033934593,
+    0.005616789683699608,
+    0.009423447772860527,
+    0.024594254791736603,
+    0.012027640827000141,
+    0.013725988566875458,
+    0.029710762202739716,
+    0.012672174721956253,
+    0.02949574589729309,
+    0.022364383563399315,
+    0.008063153363764286,
+    0.01411505788564682,
+    0.0180955920368433,
+    0.007911283522844315,
+    0.020203273743391037,
+    0.03400567173957825,
+    0.01593705266714096,
+    0.0348559133708477,
+    0.003847177140414715,
+    0.006087321788072586,
+    0.02499062940478325,
+    0.024425100535154343,
+    0.019393738359212875,
+    0.026983492076396942,
+    0.007126104086637497,
+    0.01404914166778326,
+    0.004834884312003851,
+    0.020506853237748146,
+    0.016631199046969414,
+    0.013345995917916298,
+    0.035325732082128525,
+    0.01257016696035862,
+    0.01255727093666792,
+    0.015162298455834389,
+    0.04355093091726303,
+    0.014903771691024303,
+    0.029796132817864418,
+    0.014098288491368294,
+    0.37077632546424866,
+    0.018097441643476486,
+    0.01427763793617487,
+    0.01265498623251915,
+    0.04325581714510918,
+    0.0044837649911642075,
+    0.008202055469155312,
+    0.013605650514364243,
+    0.009801516309380531,
+    0.0676860511302948,
+    0.02806568332016468,
+    0.00417341710999608,
+    0.03729550540447235,
+    0.024742387235164642,
+    0.008881935849785805,
+    0.030973996967077255,
+    0.012480157427489758,
+    0.03380731865763664,
+    0.021722858771681786,
+    0.013050004839897156,
+    0.017579730600118637,
+    0.03728094696998596,
+    0.019564352929592133,
+    0.07835634052753448,
+    0.013701368123292923,
+    0.04363565891981125,
+    0.014522546902298927,
+    0.00940126832574606,
+    0.009105189703404903,
+    0.004639082122594118,
+    0.01117100939154625,
+    0.01802808977663517,
+    0.019864307716488838,
+    0.025331202894449234,
+    0.017179206013679504,
+    0.0097345020622015,
+    0.012968136928975582,
+    0.011104542762041092,
+    0.0076412633061409,
+    0.0299502145498991,
+    0.0355219691991806,
+    0.0133560411632061,
+    0.030141964554786682,
+    0.030832771211862564,
+    0.014490367844700813,
+    0.03091680444777012,
+    0.02549120783805847,
+    0.012803496792912483,
+    0.015607193112373352,
+    0.01584657095372677,
+    0.012773927301168442,
+    0.0031158998608589172,
+    0.02921920269727707,
+    0.015847450122237206,
+    0.00959791149944067,
+    0.012651162222027779,
+    0.01267446018755436
+  ],
+  "max_memory_allocated_bytes": 7662226944,
+  "max_memory_reserved_bytes": 7753170944,
+  "memory_attribution": {
+    "checkpoint_boundary_input_bytes": 701472,
+    "first_step": {
+      "gradient_bytes": 42557440,
+      "optimizer_state_bytes": 85120656,
+      "peak_allocated_bytes": 7577104896,
+      "peak_reserved_bytes": 7662993408,
+      "saved_tensors": {
+        "by_grad_fn_bytes": {
+          "ToCopyBackward0": 65536,
+          "leaf": 773128
+        },
+        "total_bytes": 838664,
+        "total_count": 6
+      }
+    },
+    "first_step_allocator_replay": {
+      "recorded_peak_live_allocation_bytes": 2225400364,
+      "recorded_peak_live_allocation_count": 5165,
+      "top_source_frames": [
+        {
+          "bytes": 654771200,
+          "count": 490,
+          "frame": "packages/dinkster-training-torch/src/dinkster_training_torch/attachment.py:176:add_to_output"
+        },
+        {
+          "bytes": 419430400,
+          "count": 140,
+          "frame": "packages/dinkster-inference-torch/src/dinkster_inference_torch/unet.py:173:forward"
+        },
+        {
+          "bytes": 328405216,
+          "count": 1945,
+          "frame": "packages/dinkster-training-torch/src/dinkster_training_torch/attachment.py:164:forward"
+        },
+        {
+          "bytes": 317184000,
+          "count": 1050,
+          "frame": "torch/nn/functional.py:2987:layer_norm"
+        },
+        {
+          "bytes": 236105984,
+          "count": 185,
+          "frame": "torch/nn/functional.py:3042:group_norm"
+        },
+        {
+          "bytes": 108137760,
+          "count": 560,
+          "frame": "packages/dinkster-inference-torch/src/dinkster_inference_torch/attention.py:281:run"
+        },
+        {
+          "bytes": 65241088,
+          "count": 34,
+          "frame": "torch/nn/modules/conv.py:560:_conv_forward"
+        },
+        {
+          "bytes": 33554432,
+          "count": 1,
+          "frame": "torch/nn/modules/linear.py:134:forward"
+        },
+        {
+          "bytes": 30474240,
+          "count": 9,
+          "frame": "packages/dinkster-inference-torch/src/dinkster_inference_torch/unet.py:536:forward"
+        },
+        {
+          "bytes": 11489280,
+          "count": 722,
+          "frame": "packages/dinkster-training-torch/src/dinkster_training_torch/attachment.py:165:forward"
+        },
+        {
+          "bytes": 10485760,
+          "count": 11,
+          "frame": "packages/dinkster-inference-torch/src/dinkster_inference_torch/unet.py:288:forward"
+        },
+        {
+          "bytes": 5242880,
+          "count": 1,
+          "frame": "torch/nn/functional.py:2445:silu"
+        },
+        {
+          "bytes": 2621440,
+          "count": 1,
+          "frame": "packages/dinkster-inference-torch/src/dinkster_inference_torch/unet.py:161:forward"
+        },
+        {
+          "bytes": 1310720,
+          "count": 1,
+          "frame": "packages/dinkster-inference-torch/src/dinkster_inference_torch/unet.py:359:forward"
+        },
+        {
+          "bytes": 630784,
+          "count": 1,
+          "frame": "packages/dinkster-training-torch/src/dinkster_training_torch/data.py:582:batch"
+        },
+        {
+          "bytes": 65536,
+          "count": 1,
+          "frame": "packages/dinkster-training-torch/src/dinkster_training_torch/data.py:581:batch"
+        },
+        {
+          "bytes": 65536,
+          "count": 1,
+          "frame": "packages/dinkster-training-torch/src/dinkster_training_torch/trainer.py:213:_noise_batch"
+        },
+        {
+          "bytes": 65536,
+          "count": 1,
+          "frame": "packages/dinkster-training-torch/src/dinkster_training_torch/trainer.py:306:train_step"
+        },
+        {
+          "bytes": 65536,
+          "count": 1,
+          "frame": "torch/nn/functional.py:4315:mse_loss"
+        },
+        {
+          "bytes": 32768,
+          "count": 1,
+          "frame": "<native>"
+        }
+      ],
+      "trace_entry_count": 83026
+    },
+    "lora_forward": {
+      "formulation": "base-plus-low-rank-branch",
+      "full_effective_weight_bytes_per_unet_forward": 0,
+      "target_count": 722,
+      "targeted_base_parameter_count": 2207744000
+    },
+    "peak_before_training_reset": {
+      "allocated_bytes": 5316127744,
+      "reserved_bytes": 5488246784
+    },
+    "phases": {
+      "after_dataset_precompute": {
+        "active_bytes": 33554432,
+        "allocated_bytes": 33554432,
+        "block_state_bytes": {
+          "active_allocated": 33554432
+        },
+        "cuda_context_and_non_allocator_bytes": 178257920,
+        "inactive_split_bytes": 0,
+        "nvidia_smi_process_memory_mib": 202,
+        "reserved_bytes": 33554432,
+        "segment_type_bytes": {
+          "large": 33554432
+        }
+      },
+      "after_final_step": {
+        "active_bytes": 5477354496,
+        "allocated_bytes": 5477354496,
+        "block_state_bytes": {
+          "active_allocated": 5477354496,
+          "inactive": 2275816448
+        },
+        "cuda_context_and_non_allocator_bytes": 199229440,
+        "inactive_split_bytes": 616969216,
+        "nvidia_smi_process_memory_mib": 7584,
+        "reserved_bytes": 7753170944,
+        "segment_type_bytes": {
+          "large": 6991904768,
+          "small": 761266176
+        }
+      },
+      "after_first_step": {
+        "active_bytes": 5477354496,
+        "allocated_bytes": 5477354496,
+        "block_state_bytes": {
+          "active_allocated": 5477354496,
+          "inactive": 2185638912
+        },
+        "cuda_context_and_non_allocator_bytes": 199229440,
+        "inactive_split_bytes": 545666048,
+        "nvidia_smi_process_memory_mib": 7498,
+        "reserved_bytes": 7662993408,
+        "segment_type_bytes": {
+          "large": 6991904768,
+          "small": 671088640
+        }
+      },
+      "after_unet_residency": {
+        "active_bytes": 5316127744,
+        "allocated_bytes": 5316127744,
+        "block_state_bytes": {
+          "active_allocated": 5316127744,
+          "inactive": 172119040
+        },
+        "cuda_context_and_non_allocator_bytes": 178257920,
+        "inactive_split_bytes": 172119040,
+        "nvidia_smi_process_memory_mib": 5404,
+        "reserved_bytes": 5488246784,
+        "segment_type_bytes": {
+          "large": 5377097728,
+          "small": 111149056
+        }
+      }
+    },
+    "resident_tensor_bytes": {
+      "frozen_base_parameters": 5134927368,
+      "lora_master_parameters": 42557440,
+      "model_buffers": 0
+    }
+  },
+  "monitor": {
+    "nvidia_smi_peak_mib": 7584,
+    "runtime_seconds": 248.63388130100793,
+    "samples": 2009
+  },
+  "optimizer": "adamw",
+  "runtime_seconds": 148.675193528994,
+  "steps": 200,
+  "torch_version": "2.13.0+cu130"
+}
