@@ -1,11 +1,9 @@
 name: ci
-run-name: ci with private Dinkster access
 
 on:
   pull_request:
   push:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,21 +14,13 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ${{ fromJSON(vars.DINKSTER_PR_RUNNER || '["self-hosted", "linux", "x64"]') }}
-    timeout-minutes: 45
-    env:
-      # GPU 0 hosts long-lived workloads on the self-hosted runner.
-      CUDA_VISIBLE_DEVICES: "1"
-      OMP_NUM_THREADS: "4"
-      MKL_NUM_THREADS: "4"
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: ./.github/actions/configure-dinkster-access
-        with:
-          deploy-key: ${{ secrets.DINKSTER_READ_KEY }}
-      - uses: astral-sh/setup-uv@v5
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
         with:
           python-version: "3.12"
       - run: uv sync --locked --all-packages --all-extras
