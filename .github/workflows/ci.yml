@@ -19,6 +19,8 @@ jobs:
     runs-on: ${{ fromJSON(vars.DINKSTER_PR_RUNNER || '["self-hosted", "linux", "x64"]') }}
     timeout-minutes: 45
     env:
+      # GPU 0 hosts long-lived workloads on the self-hosted runner.
+      CUDA_VISIBLE_DEVICES: "1"
       OMP_NUM_THREADS: "4"
       MKL_NUM_THREADS: "4"
     steps:
