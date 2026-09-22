@@ -1,0 +1,69 @@
+name: full-validation
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  integration:
+    name: format, lint, types and integration tests
+    runs-on: ${{ fromJSON(vars.CI_RUNNERS).linux }}
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: "4"
+      MKL_NUM_THREADS: "4"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: true
+          persist-credentials: false
+      - uses: ./.github/actions/configure-dinkster-access
+        with:
+          deploy-key: ${{ secrets.DINKSTER_READ_KEY }}
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+      - run: uv sync --locked --all-packages --all-extras
+      - run: uv run ruff format --check .
+      - run: uv run ruff check .
+      - run: uv run pyright
+      - run: uv run pyright -p packages/dinkster-training-torch
+      - run: uv run pytest -q tests
+
+  main-status:
+    name: main validation status
+    if: always()
+    needs: [integration]
+    runs-on: ${{ fromJSON(vars.CI_RUNNERS).linux }}
+    timeout-minutes: 2
+    steps:
+      - name: Record every lane result
+        env:
+          INTEGRATION_RESULT: ${{ needs.integration.result }}
+        run: |
+          printf '{"commit":"%s","lanes":{"integration":"%s"}}\n' \
+            "$GITHUB_SHA" "$INTEGRATION_RESULT" > main-validation-status.json
+          cat main-validation-status.json >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: main-validation-status
+          path: main-validation-status.json
+          retention-days: 30
+          if-no-files-found: error
+      - name: Require every lane to pass
+        env:
+          INTEGRATION_RESULT: ${{ needs.integration.result }}
+        run: test "$INTEGRATION_RESULT" = success
