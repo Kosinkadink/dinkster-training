@@ -1,5 +1,7 @@
 # dinkster-training
 
+[![CI](https://github.com/Kosinkadink/dinkster-training/actions/workflows/ci.yml/badge.svg)](https://github.com/Kosinkadink/dinkster-training/actions/workflows/ci.yml)
+
 **Status: in progress.** This repository is under active development. Its
 packages are versioned `0.0.1`; interfaces and training behavior may change
 without a compatibility release. The workspace packages are not published as

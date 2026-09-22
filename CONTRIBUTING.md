@@ -22,6 +22,10 @@ and the artifacts documented in
 
 ## Pull requests
 
+Use the public [issue tracker](https://github.com/Kosinkadink/dinkster-training/issues)
+for reproducible bugs and focused feature proposals before opening a large
+change.
+
 - Keep each pull request focused and include tests for behavior changes.
 - Keep Dinkster dependencies pinned to immutable 40-character commits.
 - Do not put repository credentials, release tokens, model access tokens,
