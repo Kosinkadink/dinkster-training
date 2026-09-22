@@ -1,0 +1,50 @@
+[project]
+name = "dinkster-training-workspace"
+version = "0.0.1"
+description = "Dinkster training packages"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "dinkster",
+    "pyright>=1.1.390",
+    "pytest>=8",
+    "ruff>=0.8",
+]
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+dinkster = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607" }
+dinkster-nodes-training = { workspace = true }
+dinkster-training-torch = { workspace = true }
+dinkster-training-worker = { workspace = true }
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["UP040", "UP046", "UP047"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+include = [
+    "packages/dinkster-nodes-training",
+    "packages/dinkster-training-worker",
+    "tests",
+]
+strict = ["packages"]
+typeCheckingMode = "standard"

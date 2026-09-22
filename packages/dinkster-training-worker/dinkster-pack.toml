@@ -1,0 +1,23 @@
+[pack]
+name = "dinkster-training-worker"
+# Pure executor: claims no namespace so it composes beside
+# dinkster-nodes-foundation (a defaulted "dinkster-training-worker" claim
+# would nest under the reserved root "dinkster").
+namespaces = []
+executes = [
+    "training.dry_run",
+    "training.create_session",
+    "training.advance",
+    "training.complete_session",
+    "training.export_lora",
+]
+
+[pack.sandbox]
+
+[pack.contracts]
+host = "dinkster-pack-host/1"
+api = "dinkster-api/v1"
+
+[pack.entry]
+nodes = "dinkster_training_worker.pack:PACK_NODES"
+types = "dinkster_training_worker.pack:register_training_types"

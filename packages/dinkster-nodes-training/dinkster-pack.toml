@@ -1,0 +1,20 @@
+[pack]
+name = "dinkster-nodes-training"
+namespaces = ["training"]
+schema-only = [
+    "training.dry_run",
+    "training.create_session",
+    "training.advance",
+    "training.complete_session",
+    "training.export_lora",
+]
+
+[pack.sandbox]
+
+[pack.contracts]
+host = "dinkster-pack-host/1"
+api = "dinkster-api/v1"
+
+[pack.entry]
+nodes = "dinkster_nodes_training:PACK_NODES"
+types = "dinkster_nodes_training:register_training_types"

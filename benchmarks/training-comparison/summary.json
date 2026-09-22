@@ -1,0 +1,752 @@
+{
+  "expectations": {
+    "all_runs_have_200_finite_losses": false,
+    "all_runs_non_worsening": true,
+    "configurations": {
+      "bfloat16": {
+        "all_runs_have_200_finite_losses": true,
+        "all_runs_non_worsening": true,
+        "delta_comparisons": {
+          "ai-toolkit": {
+            "dinkster_zero_delta_count": 0,
+            "factors": {
+              "applied_delta_rms": {
+                "cross_attention": {
+                  "median": 1.658119556138277,
+                  "p95": 1.257382103285054
+                },
+                "feed_forward": {
+                  "median": 1.295089978641056,
+                  "p95": 1.171050254427174
+                },
+                "self_attention": {
+                  "median": 1.2389077314081236,
+                  "p95": 1.1302386278365186
+                },
+                "spatial_projection": {
+                  "median": 1.0909553142053117,
+                  "p95": 1.0907091177907389
+                }
+              },
+              "down_rms": {
+                "cross_attention": {
+                  "median": 1.0226492825664928,
+                  "p95": 1.009198482265537
+                },
+                "feed_forward": {
+                  "median": 1.0164490645118796,
+                  "p95": 1.006517696491005
+                },
+                "self_attention": {
+                  "median": 1.0121928414475263,
+                  "p95": 1.0085407807398348
+                },
+                "spatial_projection": {
+                  "median": 1.0106927242908714,
+                  "p95": 1.015998917353122
+                }
+              },
+              "normalized_delta_rms": {
+                "cross_attention": {
+                  "median": 1.658119556138277,
+                  "p95": 1.257382103285054
+                },
+                "feed_forward": {
+                  "median": 1.295089978641056,
+                  "p95": 1.171050254427174
+                },
+                "self_attention": {
+                  "median": 1.2389077314081236,
+                  "p95": 1.1302386278365186
+                },
+                "spatial_projection": {
+                  "median": 1.0909553142053117,
+                  "p95": 1.0907091177907389
+                }
+              },
+              "up_rms": {
+                "cross_attention": {
+                  "median": 1.6065970019615414,
+                  "p95": 1.1902804543748238
+                },
+                "feed_forward": {
+                  "median": 1.183531882742348,
+                  "p95": 1.166227159041776
+                },
+                "self_attention": {
+                  "median": 1.1748152631667692,
+                  "p95": 1.1296048322829855
+                },
+                "spatial_projection": {
+                  "median": 1.077848956362493,
+                  "p95": 1.0688593637114097
+                }
+              }
+            },
+            "reference_zero_delta_count": 0,
+            "within_limits": true
+          },
+          "kohya-gc": {
+            "dinkster_zero_delta_count": 0,
+            "factors": {
+              "applied_delta_rms": {
+                "cross_attention": {
+                  "median": 1.2325090146745439,
+                  "p95": 1.2894280572189305
+                },
+                "feed_forward": {
+                  "median": 1.1108617950193092,
+                  "p95": 1.244618297441923
+                },
+                "self_attention": {
+                  "median": 1.2825493892436435,
+                  "p95": 1.3279107517075832
+                },
+                "spatial_projection": {
+                  "median": 1.2225543431259585,
+                  "p95": 1.198100068360714
+                }
+              },
+              "down_rms": {
+                "cross_attention": {
+                  "median": 1.0037719152278153,
+                  "p95": 1.012738753401748
+                },
+                "feed_forward": {
+                  "median": 1.0041643078073852,
+                  "p95": 1.0011002331858585
+                },
+                "self_attention": {
+                  "median": 1.0036749297787253,
+                  "p95": 1.007105497775528
+                },
+                "spatial_projection": {
+                  "median": 1.007893478868414,
+                  "p95": 1.0184570300367313
+                }
+              },
+              "normalized_delta_rms": {
+                "cross_attention": {
+                  "median": 1.2325090146745439,
+                  "p95": 1.2894280572189305
+                },
+                "feed_forward": {
+                  "median": 1.1108617950193092,
+                  "p95": 1.244618297441923
+                },
+                "self_attention": {
+                  "median": 1.2825493892436435,
+                  "p95": 1.3279107517075832
+                },
+                "spatial_projection": {
+                  "median": 1.2225543431259585,
+                  "p95": 1.198100068360714
+                }
+              },
+              "up_rms": {
+                "cross_attention": {
+                  "median": 1.214644271815595,
+                  "p95": 1.247172331175567
+                },
+                "feed_forward": {
+                  "median": 1.1063169705761966,
+                  "p95": 1.1054407616833661
+                },
+                "self_attention": {
+                  "median": 1.253056788578724,
+                  "p95": 1.198546729410886
+                },
+                "spatial_projection": {
+                  "median": 1.19127341217048,
+                  "p95": 1.1328437917078207
+                }
+              }
+            },
+            "reference_zero_delta_count": 0,
+            "within_limits": true
+          }
+        },
+        "delta_scale_within_limits": true,
+        "determinism": {
+          "adapter_sha256_exact": true,
+          "losses_exact": true
+        },
+        "dinkster_kohya_loss_change_difference": 0.21432979021353343,
+        "dinkster_kohya_loss_change_within_0_25": true
+      },
+      "float32": {
+        "all_runs_have_200_finite_losses": true,
+        "all_runs_non_worsening": true,
+        "delta_comparisons": {
+          "ai-toolkit": {
+            "dinkster_zero_delta_count": 0,
+            "factors": {
+              "applied_delta_rms": {
+                "cross_attention": {
+                  "median": 1.6546652937933162,
+                  "p95": 1.2570990588264583
+                },
+                "feed_forward": {
+                  "median": 1.2948036374360443,
+                  "p95": 1.1703634257408482
+                },
+                "self_attention": {
+                  "median": 1.2361308945864182,
+                  "p95": 1.1330466529762737
+                },
+                "spatial_projection": {
+                  "median": 1.0942705751145028,
+                  "p95": 1.0903556785645483
+                }
+              },
+              "down_rms": {
+                "cross_attention": {
+                  "median": 1.0223215673123895,
+                  "p95": 1.0093208783770038
+                },
+                "feed_forward": {
+                  "median": 1.0164473170580748,
+                  "p95": 1.006513373091622
+                },
+                "self_attention": {
+                  "median": 1.012168696565269,
+                  "p95": 1.0083958820599066
+                },
+                "spatial_projection": {
+                  "median": 1.0106624651618168,
+                  "p95": 1.0159495050416205
+                }
+              },
+              "normalized_delta_rms": {
+                "cross_attention": {
+                  "median": 1.6546652937933162,
+                  "p95": 1.2570990588264583
+                },
+                "feed_forward": {
+                  "median": 1.2948036374360443,
+                  "p95": 1.1703634257408482
+                },
+                "self_attention": {
+                  "median": 1.2361308945864182,
+                  "p95": 1.1330466529762737
+                },
+                "spatial_projection": {
+                  "median": 1.0942705751145028,
+                  "p95": 1.0903556785645483
+                }
+              },
+              "up_rms": {
+                "cross_attention": {
+                  "median": 1.60315743508319,
+                  "p95": 1.1914053887744676
+                },
+                "feed_forward": {
+                  "median": 1.1814457122172741,
+                  "p95": 1.165657829745047
+                },
+                "self_attention": {
+                  "median": 1.1760074400582832,
+                  "p95": 1.1299264832245959
+                },
+                "spatial_projection": {
+                  "median": 1.0779175749187544,
+                  "p95": 1.0693418613622137
+                }
+              }
+            },
+            "reference_zero_delta_count": 0,
+            "within_limits": true
+          },
+          "kohya-gc": {
+            "dinkster_zero_delta_count": 0,
+            "factors": {
+              "applied_delta_rms": {
+                "cross_attention": {
+                  "median": 1.2299414015832837,
+                  "p95": 1.2891377990186585
+                },
+                "feed_forward": {
+                  "median": 1.1106161862120192,
+                  "p95": 1.243888320613877
+                },
+                "self_attention": {
+                  "median": 1.2796747358054412,
+                  "p95": 1.3312098840167341
+                },
+                "spatial_projection": {
+                  "median": 1.2262695151136214,
+                  "p95": 1.1977118295955351
+                }
+              },
+              "down_rms": {
+                "cross_attention": {
+                  "median": 1.0034502493606716,
+                  "p95": 1.0128615788791206
+                },
+                "feed_forward": {
+                  "median": 1.004162581473227,
+                  "p95": 1.001095933056665
+                },
+                "self_attention": {
+                  "median": 1.003650988083021,
+                  "p95": 1.0069608053050172
+                },
+                "spatial_projection": {
+                  "median": 1.0079236550943071,
+                  "p95": 1.018407498176845
+                }
+              },
+              "normalized_delta_rms": {
+                "cross_attention": {
+                  "median": 1.2299414015832837,
+                  "p95": 1.2891377990186585
+                },
+                "feed_forward": {
+                  "median": 1.1106161862120192,
+                  "p95": 1.243888320613877
+                },
+                "self_attention": {
+                  "median": 1.2796747358054412,
+                  "p95": 1.3312098840167341
+                },
+                "spatial_projection": {
+                  "median": 1.2262695151136214,
+                  "p95": 1.1977118295955351
+                }
+              },
+              "up_rms": {
+                "cross_attention": {
+                  "median": 1.2120438373561662,
+                  "p95": 1.248351034104332
+                },
+                "feed_forward": {
+                  "median": 1.1043669040937818,
+                  "p95": 1.104901107117319
+                },
+                "self_attention": {
+                  "median": 1.2543283632627908,
+                  "p95": 1.1988880113114777
+                },
+                "spatial_projection": {
+                  "median": 1.1913492516108517,
+                  "p95": 1.133355172799463
+                }
+              }
+            },
+            "reference_zero_delta_count": 0,
+            "within_limits": true
+          }
+        },
+        "delta_scale_within_limits": true,
+        "determinism": {
+          "adapter_sha256_exact": true,
+          "losses_exact": true
+        },
+        "dinkster_kohya_loss_change_difference": 0.21456745904253455,
+        "dinkster_kohya_loss_change_within_0_25": true
+      },
+      "sdxl": {
+        "all_runs_have_200_finite_losses": false,
+        "all_runs_non_worsening": true,
+        "delta_comparisons": {
+          "sdxl-ai-toolkit": {
+            "dinkster_zero_delta_count": 0,
+            "factors": {
+              "applied_delta_rms": {
+                "cross_attention": {
+                  "median": 4.354841694064115,
+                  "p95": 1.6369201739055044
+                },
+                "feed_forward": {
+                  "median": 1.6755197750332926,
+                  "p95": 1.0267913226073033
+                },
+                "self_attention": {
+                  "median": 1.4342871381801334,
+                  "p95": 1.0069532099515899
+                },
+                "spatial_projection": {
+                  "median": 1.1885643712706426,
+                  "p95": 1.323660624940829
+                }
+              },
+              "down_rms": {
+                "cross_attention": {
+                  "median": 1.050048957709827,
+                  "p95": 1.008219352325778
+                },
+                "feed_forward": {
+                  "median": 1.0247996203690555,
+                  "p95": 1.0056403526628284
+                },
+                "self_attention": {
+                  "median": 1.024361084484077,
+                  "p95": 1.0041407599241652
+                },
+                "spatial_projection": {
+                  "median": 1.0066654534644028,
+                  "p95": 1.003123134433478
+                }
+              },
+              "normalized_delta_rms": {
+                "cross_attention": {
+                  "median": 4.354841694064115,
+                  "p95": 1.6369201739055044
+                },
+                "feed_forward": {
+                  "median": 1.6755197750332926,
+                  "p95": 1.0267913226073033
+                },
+                "self_attention": {
+                  "median": 1.4342871381801334,
+                  "p95": 1.0069532099515899
+                },
+                "spatial_projection": {
+                  "median": 1.1885643712706426,
+                  "p95": 1.323660624940829
+                }
+              },
+              "up_rms": {
+                "cross_attention": {
+                  "median": 3.5346397689420956,
+                  "p95": 1.5550825418820247
+                },
+                "feed_forward": {
+                  "median": 1.4853803663607879,
+                  "p95": 1.1411900071703682
+                },
+                "self_attention": {
+                  "median": 1.3306255023192655,
+                  "p95": 1.0121173282449276
+                },
+                "spatial_projection": {
+                  "median": 1.1441951740414864,
+                  "p95": 1.395591472729592
+                }
+              }
+            },
+            "reference_zero_delta_count": 0,
+            "within_limits": true
+          },
+          "sdxl-kohya": {
+            "dinkster_zero_delta_count": 0,
+            "factors": {
+              "applied_delta_rms": {
+                "cross_attention": {
+                  "median": 1.0365348964459504,
+                  "p95": 1.0715618284069646
+                },
+                "feed_forward": {
+                  "median": 1.0373725417360902,
+                  "p95": 1.0452544420202552
+                },
+                "self_attention": {
+                  "median": 1.0068268203249484,
+                  "p95": 1.0293239739292674
+                },
+                "spatial_projection": {
+                  "median": 1.0080622046823526,
+                  "p95": 1.0567810446983512
+                }
+              },
+              "down_rms": {
+                "cross_attention": {
+                  "median": 1.0125049314548435,
+                  "p95": 1.0034665684693542
+                },
+                "feed_forward": {
+                  "median": 1.0052991374376952,
+                  "p95": 1.0000807649350392
+                },
+                "self_attention": {
+                  "median": 1.001240058878139,
+                  "p95": 1.0028910089864258
+                },
+                "spatial_projection": {
+                  "median": 1.0113032489085914,
+                  "p95": 1.0005927743850929
+                }
+              },
+              "normalized_delta_rms": {
+                "cross_attention": {
+                  "median": 1.0365348964459504,
+                  "p95": 1.0715618284069646
+                },
+                "feed_forward": {
+                  "median": 1.0373725417360902,
+                  "p95": 1.0452544420202552
+                },
+                "self_attention": {
+                  "median": 1.0068268203249484,
+                  "p95": 1.0293239739292674
+                },
+                "spatial_projection": {
+                  "median": 1.0080622046823526,
+                  "p95": 1.0567810446983512
+                }
+              },
+              "up_rms": {
+                "cross_attention": {
+                  "median": 1.0003189902026552,
+                  "p95": 1.0452884222697247
+                },
+                "feed_forward": {
+                  "median": 1.0303634139542717,
+                  "p95": 1.010270280626475
+                },
+                "self_attention": {
+                  "median": 1.0015448258753166,
+                  "p95": 1.011681892244532
+                },
+                "spatial_projection": {
+                  "median": 1.0501974196682136,
+                  "p95": 1.0681208994520084
+                }
+              }
+            },
+            "reference_zero_delta_count": 0,
+            "within_limits": true
+          }
+        },
+        "delta_scale_within_limits": true,
+        "determinism": {
+          "adapter_sha256_exact": true,
+          "losses_exact": true
+        },
+        "dinkster_kohya_loss_change_difference": 0.2476923319236321,
+        "dinkster_kohya_loss_change_within_0_25": true,
+        "export_audits": {
+          "sdxl-ai-toolkit": {
+            "family_audits": {
+              "cross_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "feed_forward": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 140,
+                "rank": 4.0
+              },
+              "self_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "spatial_projection": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 22,
+                "rank": 4.0
+              }
+            },
+            "matches": true,
+            "metadata": {
+              "ss_base_model_version": "sdxl_1.0",
+              "training_step": 200
+            },
+            "metadata_matches": true
+          },
+          "sdxl-dinkster-adamw-a": {
+            "family_audits": {
+              "cross_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "feed_forward": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 140,
+                "rank": 4.0
+              },
+              "self_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "spatial_projection": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 22,
+                "rank": 4.0
+              }
+            },
+            "matches": true,
+            "metadata": {
+              "dinkster_runtime_identity": "dinkster-sdxl-training-comparison",
+              "dinkster_step_cursor": "200"
+            },
+            "metadata_matches": true
+          },
+          "sdxl-dinkster-adamw-b": {
+            "family_audits": {
+              "cross_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "feed_forward": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 140,
+                "rank": 4.0
+              },
+              "self_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "spatial_projection": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 22,
+                "rank": 4.0
+              }
+            },
+            "matches": true,
+            "metadata": {
+              "dinkster_runtime_identity": "dinkster-sdxl-training-comparison",
+              "dinkster_step_cursor": "200"
+            },
+            "metadata_matches": true
+          },
+          "sdxl-dinkster-factored": {
+            "family_audits": {
+              "cross_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "feed_forward": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 140,
+                "rank": 4.0
+              },
+              "self_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "spatial_projection": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 22,
+                "rank": 4.0
+              }
+            },
+            "matches": true,
+            "metadata": {
+              "dinkster_runtime_identity": "dinkster-sdxl-training-comparison",
+              "dinkster_step_cursor": "200"
+            },
+            "metadata_matches": true
+          },
+          "sdxl-kohya": {
+            "family_audits": {
+              "cross_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "feed_forward": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 140,
+                "rank": 4.0
+              },
+              "self_attention": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 280,
+                "rank": 4.0
+              },
+              "spatial_projection": {
+                "alpha": 4.0,
+                "alpha_tensor_present": true,
+                "effective_scale": 1.0,
+                "matches": true,
+                "module_count": 22,
+                "rank": 4.0
+              }
+            },
+            "matches": true,
+            "metadata": {
+              "ss_base_model_version": "sdxl_base_v1-0",
+              "ss_network_alpha": "4.0",
+              "ss_network_dim": "4",
+              "ss_sd_scripts_commit_hash": "37a1cbbc5725ed2a3575506e7bd2001c9908ac92",
+              "ss_steps": "200"
+            },
+            "metadata_matches": true
+          }
+        },
+        "rank_alpha_and_metadata_match": true
+      }
+    }
+  },
+  "runs": {
+    "ai-toolkit": "results/ai-toolkit.json",
+    "dinkster-adamw-a": "results/dinkster-adamw-a.json",
+    "dinkster-adamw-b": "results/dinkster-adamw-b.json",
+    "dinkster-factored": "results/dinkster-factored.json",
+    "dinkster-fp32-adamw-a": "results/dinkster-fp32-adamw-a.json",
+    "dinkster-fp32-adamw-b": "results/dinkster-fp32-adamw-b.json",
+    "kohya-gc": "results/kohya-gc.json",
+    "kohya-no-gc": "results/kohya-no-gc.json",
+    "sdxl-ai-toolkit": "results/sdxl-ai-toolkit.json",
+    "sdxl-dinkster-adamw-a": "results/sdxl-dinkster-adamw-a.json",
+    "sdxl-dinkster-adamw-b": "results/sdxl-dinkster-adamw-b.json",
+    "sdxl-dinkster-factored": "results/sdxl-dinkster-factored.json",
+    "sdxl-kohya": "results/sdxl-kohya.json"
+  }
+}

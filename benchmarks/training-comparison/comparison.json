@@ -1,0 +1,16 @@
+{
+  "ai_toolkit_commit": "27a03a91f23eb1b757d5ec2e80ee3e129cfcc350",
+  "alpha": 4.0,
+  "batch_size": 1,
+  "betas": [0.9, 0.999],
+  "gradient_accumulation_steps": 1,
+  "learning_rate": 0.0001,
+  "model_bytes": 4265146304,
+  "model_sha256": "6ce0161689b3853acaa03779ec93eafe75a02f4ced659bee03f50797806fa2fa",
+  "rank": 4,
+  "resolution": 512,
+  "seed": 1234,
+  "steps": 200,
+  "weight_decay": 0.01,
+  "kohya_commit": "37a1cbbc5725ed2a3575506e7bd2001c9908ac92"
+}
