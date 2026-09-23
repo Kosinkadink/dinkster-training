@@ -65,18 +65,15 @@ pytestmark = pytest.mark.skipif(
     reason="explicit MiniMax Music 3 CUDA preflight required (see README)",
 )
 
-_MODELS = Path(
-    os.environ.get(
-        "DINKSTER_MINIMAX_MUSIC3_MODELS",
-        "/home/kosin/model-artifacts/dinkster-1084-minimax-music3",
+_MODELS_ENV = os.environ.get("DINKSTER_MINIMAX_MUSIC3_MODELS")
+_COMMUNITY_ENV = os.environ.get("DINKSTER_MINIMAX_MUSIC3_TRAINING_ARTIFACTS")
+if _PREFLIGHT and (not _MODELS_ENV or not _COMMUNITY_ENV):
+    raise RuntimeError(
+        "DINKSTER_MINIMAX_MUSIC3_MODELS and "
+        "DINKSTER_MINIMAX_MUSIC3_TRAINING_ARTIFACTS must be set for the preflight"
     )
-)
-_COMMUNITY = Path(
-    os.environ.get(
-        "DINKSTER_MINIMAX_MUSIC3_TRAINING_ARTIFACTS",
-        "/home/kosin/model-artifacts/dinkster-1176-minimax-music3-training",
-    )
-)
+_MODELS = Path(_MODELS_ENV or ".")
+_COMMUNITY = Path(_COMMUNITY_ENV or ".")
 _DAV = _COMMUNITY / "minimax_music3_dav_full_fce0d00b.safetensors"
 _RVQ = (
     _COMMUNITY / "minimax_music3_rvq_encoder_v4_169m_autoregressive_depth_recommended.safetensors"
