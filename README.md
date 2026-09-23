@@ -74,6 +74,10 @@ request requirements. Public CI runs only on GitHub-hosted Linux workers and
 requires no repository secrets. Accelerator validation is a separate developer
 activity and is not part of hosted CI.
 
+Pull requests run a bounded format, lint, type, and integration tier. Main and
+scheduled validation add the complete training runtime suite in seven explicit
+parallel groups and publish an aggregate result artifact for every lane.
+
 ## License
 
 This project is licensed under GPL-3.0-or-later. See [LICENSE](LICENSE).
