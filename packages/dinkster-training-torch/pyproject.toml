@@ -1,22 +1,21 @@
 [project]
 name = "dinkster-training-torch"
 version = "0.0.1"
-description = "Native SD1.5, SDXL, Flux, Wan, and MiniMax LoRA training runtime for Dinkster"
+description = "SD1.5 LoRA training through dinkster-comfy"
 requires-python = ">=3.12"
 dependencies = [
-    "av==16.0.1",
     "dinkster-api",
-    "dinkster-inference",
-    "dinkster-inference-torch",
+    "dinkster-comfy",
     "dinkster-nodes-training",
     "dinkster-server",
     "pillow>=10",
+    "safetensors>=0.4.2",
 ]
 
 # The workspace root remains torch-free. Runtime workers install this extra in
 # their dedicated torch environment.
 [project.optional-dependencies]
-torch = ["dinkster-inference-torch[torch]"]
+torch = ["torch>=2.5"]
 
 [build-system]
 requires = ["hatchling"]
@@ -26,11 +25,10 @@ build-backend = "hatchling.build"
 packages = ["src/dinkster_training_torch"]
 
 [tool.uv.sources]
-dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-api" }
-dinkster-inference = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-inference" }
-dinkster-inference-torch = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-inference-torch" }
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-api" }
+dinkster-comfy = { git = "https://github.com/Kosinkadink/dinkster-comfy.git", rev = "21c85fa1aa9a6c5b42e4c599ae0a1ce717fbc401" }
 dinkster-nodes-training = { workspace = true }
-dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-server" }
+dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-server" }
 
 [tool.pyright]
 pythonVersion = "3.12"

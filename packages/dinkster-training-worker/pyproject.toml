@@ -9,13 +9,6 @@ dependencies = ["dinkster-api", "dinkster-nodes-training", "dinkster-server", "d
 # dedicated training worker environment.
 [project.optional-dependencies]
 sd15-lora = ["dinkster-training-torch[torch]"]
-sdxl-lora = ["dinkster-training-torch[torch]"]
-flux-lora = ["dinkster-training-torch[torch]"]
-ideogram4-lora = ["dinkster-training-torch[torch]"]
-minimax-h3-lora = ["dinkster-training-torch[torch]"]
-minimax-music3-lora = ["dinkster-training-torch[torch]"]
-qwen-image-lora = ["dinkster-training-torch[torch]"]
-wan-lora = ["dinkster-training-torch[torch]"]
 
 [build-system]
 requires = ["hatchling"]
@@ -29,8 +22,8 @@ packages = ["src/dinkster_training_worker"]
 "src/dinkster_training_worker" = "dinkster_training_worker_pack/dinkster_training_worker"
 
 [tool.uv.sources]
-dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-api" }
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-api" }
 dinkster-nodes-training = { workspace = true }
-dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-server" }
+dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-server" }
 dinkster-training-torch = { workspace = true }
-dinkster-workers = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "cf262295b12f103059859be71a533c0fea3f8607", subdirectory = "packages/dinkster-workers" }
+dinkster-workers = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-workers" }
