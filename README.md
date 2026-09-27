@@ -8,15 +8,15 @@ without a compatibility release. The workspace packages are not published as
 stable package-index releases.
 
 This workspace provides Dinkster's first-party training node schemas, durable
-training worker, and native PyTorch LoRA training implementations. Dinkster
-supplies the graph, protocol, server, inference, and worker foundations; this
-repository pins an immutable public Dinkster revision in `uv.lock` and adds the
-training-specific packages on top. It contains:
+training worker, and LoRA training integration with `dinkster_comfy`. Dinkster
+supplies the graph, protocol, server, and worker foundations; this repository
+pins immutable public Dinkster and `dinkster_comfy` revisions in `uv.lock` and
+adds the training-specific packages on top. It contains:
 
 - `dinkster-nodes-training`: graph-facing training nodes and service contract.
 - `dinkster-training-worker`: isolated fake and torch backend selection.
-- `dinkster-training-torch`: native model training, datasets, checkpoints, and
-  LoRA export.
+- `dinkster-training-torch`: SD1.5 model training through `dinkster_comfy`,
+  datasets, checkpoints, and LoRA export.
 - `benchmarks/training-comparison`: retained SD1.5 and SDXL trainer comparisons,
   reports, and collection tools.
 
@@ -46,21 +46,18 @@ varies by machine.
 | --- | --- | --- |
 | `packages/dinkster-nodes-training` | Implemented | Training node schemas and the service boundary; no torch dependency. |
 | `packages/dinkster-training-worker` with `fake` | Supported for CPU development and CI | Deterministic protocol exerciser only; it does not train a model. |
-| `packages/dinkster-training-worker` with a LoRA backend | In progress | Requires an explicit checkpoint root and the torch runtime package. |
-| SD1.5 and SDXL LoRA | In progress | Native implementations with automated CPU tests; real training requires user-supplied model assets and suitable hardware. |
-| Flux, Flux2, Ideogram 4, Qwen-Image, and Wan LoRA | Experimental | Native implementations have automated CPU tests, but hosted CI does not perform physical-accelerator or full-model validation. |
-| MiniMax H3 LoRA | Experimental | Requires pinned user-supplied model components; real-model and accelerator coverage is outside hosted CI. |
-| MiniMax Music 3 LoRA | Experimental, community-derived | Not an official MiniMax recipe. Real-audio quality is not established, and fixed-duration and artifact limitations apply. |
+| `packages/dinkster-training-worker` with `sd15-lora` | Supported | Requires an explicit checkpoint root, user-supplied model and dataset paths, and the torch runtime package. |
+| SD1.5 LoRA | Supported | Loads, encodes, trains, and exports through `dinkster_comfy`; real training requires user-supplied model assets and suitable hardware. |
 
-`packages/dinkster-training-torch/README.md` documents each model backend's
-configuration, data contract, artifact requirements, and validation commands.
+`packages/dinkster-training-torch/README.md` documents the SD1.5 backend's
+configuration, data contract, and artifact requirements.
 The repository does not distribute model weights, datasets, checkpoints, or
 generated LoRA files.
 
 The lockfile pins every Dinkster dependency to one immutable Dinkster commit.
 This repository requires neither a sibling checkout nor private package access.
-Dinkster's default installation sources the node and worker packages from this
-workspace, so serving with a library root composes training automatically.
+Dinkster's default installation does not install or compose these training
+packs. An installation must add the node and dedicated worker packs explicitly.
 
 Dependency updates are sequential. Training first advances its pinned Dinkster
 revision when it needs a newer public API and publishes a tested commit. Dinkster

@@ -110,72 +110,31 @@ def test_backend_selection_keeps_fake_torch_free_and_loads_lora_backends_lazily(
                 checkpoint_root: Path,
                 *,
                 cancelled: object,
+                expected_device: str,
             ) -> None:
                 selected.update(
                     store=selected_store,
                     checkpoint_root=checkpoint_root,
                     cancelled=cancelled,
+                    expected_device=expected_device,
                 )
 
         class SD15TorchService(TorchService):
             pass
 
-        class SDXLTorchService(TorchService):
-            pass
-
-        class MiniMaxH3TorchService(TorchService):
-            pass
-
-        class MiniMaxMusic3TorchService(TorchService):
-            pass
-
-        class WanTorchService(TorchService):
-            pass
-
-        class FluxTorchService(TorchService):
-            pass
-
-        class Flux2TorchService(TorchService):
-            pass
-
-        class QwenImageTorchService(TorchService):
-            pass
-
-        class Ideogram4TorchService(TorchService):
-            pass
-
         module = types.ModuleType("dinkster_training_torch")
         module.__dict__["SD15LoRATrainingService"] = SD15TorchService
-        module.__dict__["SDXLLoRATrainingService"] = SDXLTorchService
-        module.__dict__["MiniMaxH3LoRATrainingService"] = MiniMaxH3TorchService
-        module.__dict__["MiniMaxMusic3LoRATrainingService"] = MiniMaxMusic3TorchService
-        module.__dict__["WanLoRATrainingService"] = WanTorchService
-        module.__dict__["FluxLoRATrainingService"] = FluxTorchService
-        module.__dict__["Flux2LoRATrainingService"] = Flux2TorchService
-        module.__dict__["QwenImageLoRATrainingService"] = QwenImageTorchService
-        module.__dict__["Ideogram4LoRATrainingService"] = Ideogram4TorchService
         monkeypatch.setitem(sys.modules, "dinkster_training_torch", module)
-        for backend, service_type in (
-            ("sd15-lora", SD15TorchService),
-            ("sdxl-lora", SDXLTorchService),
-            ("minimax-h3-lora", MiniMaxH3TorchService),
-            ("minimax-music3-lora", MiniMaxMusic3TorchService),
-            ("wan-lora", WanTorchService),
-            ("flux-lora", FluxTorchService),
-            ("flux2-lora", Flux2TorchService),
-            ("qwen-image-lora", QwenImageTorchService),
-            ("ideogram4-lora", Ideogram4TorchService),
-        ):
-            selected.clear()
-            service = create_training_service(
-                backend,
-                store,
-                environment={"DINKSTER_TRAINING_CHECKPOINT_ROOT": str(tmp_path / "checkpoints")},
-            )
-            assert isinstance(service, service_type)
-            assert selected["store"] is store
-            assert selected["checkpoint_root"] == tmp_path / "checkpoints"
-            assert callable(selected["cancelled"])
+        service = create_training_service(
+            "sd15-lora",
+            store,
+            environment={"DINKSTER_TRAINING_CHECKPOINT_ROOT": str(tmp_path / "checkpoints")},
+        )
+        assert isinstance(service, SD15TorchService)
+        assert selected["store"] is store
+        assert selected["checkpoint_root"] == tmp_path / "checkpoints"
+        assert callable(selected["cancelled"])
+        assert selected["expected_device"] == "cuda:0"
     finally:
         store.close()
 

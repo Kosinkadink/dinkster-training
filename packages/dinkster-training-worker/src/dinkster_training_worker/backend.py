@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections.abc import Mapping
 from pathlib import Path
 
@@ -35,63 +36,17 @@ def create_training_service(
             cancelled=_invocation_cancelled,
             first_step_delay=first_step_delay,
         )
-    if name in (
-        "sd15-lora",
-        "sdxl-lora",
-        "flux-lora",
-        "flux2-lora",
-        "ideogram4-lora",
-        "minimax-h3-lora",
-        "minimax-music3-lora",
-        "qwen-image-lora",
-        "wan-lora",
-    ):
+    if name == "sd15-lora":
         checkpoint_root = (environment or {}).get("DINKSTER_TRAINING_CHECKPOINT_ROOT")
         if not checkpoint_root:
             raise ValueError(f"DINKSTER_TRAINING_CHECKPOINT_ROOT must be set for {name}")
-        if name == "sd15-lora":
-            from dinkster_training_torch import SD15LoRATrainingService
+        os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
+        from dinkster_training_torch import SD15LoRATrainingService
 
-            service_type = SD15LoRATrainingService
-        elif name == "sdxl-lora":
-            from dinkster_training_torch import SDXLLoRATrainingService
-
-            service_type = SDXLLoRATrainingService
-        elif name == "wan-lora":
-            from dinkster_training_torch import WanLoRATrainingService
-
-            service_type = WanLoRATrainingService
-        elif name == "flux-lora":
-            from dinkster_training_torch import FluxLoRATrainingService
-
-            service_type = FluxLoRATrainingService
-        elif name == "flux2-lora":
-            from dinkster_training_torch import Flux2LoRATrainingService
-
-            service_type = Flux2LoRATrainingService
-        elif name == "qwen-image-lora":
-            from dinkster_training_torch import QwenImageLoRATrainingService
-
-            service_type = QwenImageLoRATrainingService
-        elif name == "ideogram4-lora":
-            from dinkster_training_torch import Ideogram4LoRATrainingService
-
-            service_type = Ideogram4LoRATrainingService
-        elif name == "minimax-music3-lora":
-            from dinkster_training_torch import MiniMaxMusic3LoRATrainingService
-
-            service_type = MiniMaxMusic3LoRATrainingService
-        else:
-            from dinkster_training_torch import MiniMaxH3LoRATrainingService
-
-            service_type = MiniMaxH3LoRATrainingService
-        return service_type(
+        return SD15LoRATrainingService(
             store,
             Path(checkpoint_root),
             cancelled=_invocation_cancelled,
+            expected_device=(environment or {}).get("DINKSTER_TRAINING_DEVICE", "cuda:0"),
         )
-    raise ValueError(
-        f"unknown training backend {name!r}; available backends: fake, sd15-lora,"
-        " sdxl-lora, flux-lora, flux2-lora, minimax-h3-lora, minimax-music3-lora,"
-        " ideogram4-lora, qwen-image-lora, wan-lora"
-    )
+    raise ValueError(f"unknown training backend {name!r}; available backends: fake, sd15-lora")
