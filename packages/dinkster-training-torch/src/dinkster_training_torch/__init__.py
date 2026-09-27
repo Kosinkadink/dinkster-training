@@ -1,5 +1,13 @@
 """SD1.5 LoRA training through dinkster_comfy."""
 
+import torch as _torch
+from dinkster_comfy.cli_args import args as _comfy_args
+
+# dinkster_comfy selects its device while model_management imports. Training
+# owns this process, so select its CPU fallback before importing model modules.
+if not _torch.cuda.is_available():
+    _comfy_args.cpu = True
+
 from .attachment import AttachmentError, ComfyBypassAttachment, Target, resolve_targets
 from .checkpoint import CheckpointError, CheckpointState, ContentAddressedCheckpointStore
 from .config import DatasetConfig, TrainingConfig, TrainingConfigError

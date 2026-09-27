@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import os
+import subprocess
+import sys
 from pathlib import Path
 
 import torch
-from dinkster_comfy.lora import load_lora, model_lora_keys_unet
-from dinkster_comfy.model_patcher import ModelPatcher
 from dinkster_training_torch.attachment import ComfyBypassAttachment
 from dinkster_training_torch.config import DatasetConfig
 from dinkster_training_torch.dataset import EncodedDataset, PreparedBatch
@@ -36,7 +37,28 @@ class _TinyForkModel(torch.nn.Module):
         self.device = torch.device("cpu")
 
 
+def test_package_selects_fork_cpu_before_model_management_import() -> None:
+    environment = os.environ.copy()
+    environment["CUDA_VISIBLE_DEVICES"] = ""
+    subprocess.run(
+        [
+            sys.executable,
+            "-c",
+            (
+                "import dinkster_training_torch; "
+                "from dinkster_comfy import model_management; "
+                "assert model_management.get_torch_device().type == 'cpu'"
+            ),
+        ],
+        check=True,
+        env=environment,
+    )
+
+
 def test_fork_bypass_attachment_is_trainable_and_ejects() -> None:
+    from dinkster_comfy.lora import load_lora, model_lora_keys_unet
+    from dinkster_comfy.model_patcher import ModelPatcher
+
     model = _TinyForkModel()
     layer = model.diffusion_model.attn2.to_q
     patcher = ModelPatcher(model, torch.device("cpu"), torch.device("cpu"))
