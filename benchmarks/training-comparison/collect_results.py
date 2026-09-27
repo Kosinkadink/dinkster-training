@@ -17,9 +17,6 @@ from safetensors import safe_open
 SD15_RUN_NAMES = (
     "dinkster-adamw-a",
     "dinkster-adamw-b",
-    "dinkster-factored",
-    "dinkster-fp32-adamw-a",
-    "dinkster-fp32-adamw-b",
     "kohya-gc",
     "kohya-no-gc",
     "ai-toolkit",
@@ -330,14 +327,14 @@ def main() -> None:
         ai_output_name = "comparison_ai_toolkit_sdxl"
     else:
         run_names = SD15_RUN_NAMES
-        dinkster_names = SD15_RUN_NAMES[:5]
+        dinkster_names = SD15_RUN_NAMES[:2]
         kohya_names = ("kohya-gc", "kohya-no-gc")
         ai_name = "ai-toolkit"
         ai_output_name = "comparison_ai_toolkit"
 
     for name in dinkster_names:
         run = json.loads((scratch / "runs" / name / "result.json").read_text(encoding="utf-8"))
-        run.setdefault("base_dtype", "float32" if name.startswith("dinkster-fp32-") else "bfloat16")
+        run.setdefault("base_dtype", "float32")
         run.setdefault("deterministic_algorithms", True)
         run["loss_summary"] = _loss_summary(run["losses"])
         results[name] = run
@@ -437,19 +434,11 @@ def main() -> None:
         output_runs.update({name: f"results/{name}.json" for name in run_names})
     else:
         configurations = {
-            "bfloat16": _configuration_expectations(
+            "dinkster-comfy-float32": _configuration_expectations(
                 results,
-                ("dinkster-adamw-a", "dinkster-adamw-b", "dinkster-factored"),
+                ("dinkster-adamw-a", "dinkster-adamw-b"),
                 "dinkster-adamw-a",
                 "dinkster-adamw-b",
-                "kohya-gc",
-                ("kohya-gc", "ai-toolkit"),
-            ),
-            "float32": _configuration_expectations(
-                results,
-                ("dinkster-fp32-adamw-a", "dinkster-fp32-adamw-b"),
-                "dinkster-fp32-adamw-a",
-                "dinkster-fp32-adamw-b",
                 "kohya-gc",
                 ("kohya-gc", "ai-toolkit"),
             ),

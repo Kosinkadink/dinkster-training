@@ -46,11 +46,11 @@ varies by machine.
 | --- | --- | --- |
 | `packages/dinkster-nodes-training` | Implemented | Training node schemas and the service boundary; no torch dependency. |
 | `packages/dinkster-training-worker` with `fake` | Supported for CPU development and CI | Deterministic protocol exerciser only; it does not train a model. |
-| `packages/dinkster-training-worker` with `sd15-lora` | In progress | Requires an explicit checkpoint root, user-supplied model and dataset paths, and the torch runtime package. |
-| SD1.5 LoRA | In progress | Loads and encodes through `dinkster_comfy`; real training requires user-supplied model assets and suitable hardware. |
+| `packages/dinkster-training-worker` with `sd15-lora` | Supported | Requires an explicit checkpoint root, user-supplied model and dataset paths, and the torch runtime package. |
+| SD1.5 LoRA | Supported | Loads, encodes, trains, and exports through `dinkster_comfy`; real training requires user-supplied model assets and suitable hardware. |
 
-`packages/dinkster-training-torch/README.md` documents each model backend's
-configuration, data contract, artifact requirements, and validation commands.
+`packages/dinkster-training-torch/README.md` documents the SD1.5 backend's
+configuration, data contract, and artifact requirements.
 The repository does not distribute model weights, datasets, checkpoints, or
 generated LoRA files.
 

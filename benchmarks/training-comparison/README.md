@@ -1,22 +1,18 @@
-# SD1.5 and SDXL LoRA training comparison
+# SD1.5 LoRA training comparison
 
-This harness compares short SD1.5 and SDXL UNet LoRA runs in Dinkster,
+This harness compares short SD1.5 UNet LoRA runs in Dinkster,
 `kohya-ss/sd-scripts`, and `ostris/ai-toolkit`. It generates a fixed synthetic
 image/caption dataset, runs each trainer with matched settings, records loss and
 CUDA memory, and summarizes the exported adapters without committing model or
-dataset artifacts. Dinkster is measured with both bfloat16 and float32 frozen-base
-storage for SD1.5 and bfloat16 storage for SDXL, while its LoRA masters,
-gradients, optimizer state, and exports remain float32.
+dataset artifacts. The current Dinkster run uses the `dinkster_comfy` checkpoint,
+VAE, CLIP, UNet forward, bypass attachment, and LoRA key map. Its frozen base,
+LoRA masters, gradients, optimizer state, and exports are float32.
 
 The runs use 200 optimizer steps, 512x512 images, batch size 1, no gradient
-accumulation, rank/alpha 4, AdamW at 1e-4 with a constant learning rate, bf16
-forward computation, and UNet-only training. Reference-specific differences
+accumulation, rank/alpha 4, AdamW at 1e-4 with a constant learning rate, and
+UNet-only training. Dinkster uses float32 forward computation. Reference-specific differences
 must be recorded in `REPORT.md`; they must not be hidden by changing the
 expectations after a run.
-
-SDXL also runs at 512x512 so all three tools fit on a 16 GB GPU under the same
-settings. SDXL is conventionally trained at 1024x1024; this harness measures
-short-run correctness and memory, not training quality.
 
 ## Pre-declared expectations
 
@@ -55,20 +51,8 @@ The complete run is:
   --ai-toolkit-repo /scratch/ai-toolkit
 ```
 
-The matched SDXL run uses the same pinned references and a separate scratch
-root:
-
-```bash
-.venv-gpu/bin/python benchmarks/training-comparison/run_all.py \
-  --family sdxl \
-  --model /scratch/sd_xl_base_1.0.safetensors \
-  --scratch /scratch/dinkster-training-comparison-sdxl \
-  --kohya-repo /scratch/sd-scripts \
-  --ai-toolkit-repo /scratch/ai-toolkit
-```
-
-To add or replace only the two Dinkster float32-base controls while preserving the
-existing reference and bfloat16 run directories, pass:
+To replace only the two deterministic Dinkster runs while preserving the
+existing reference run directories, pass:
 
 ```bash
 .venv-gpu/bin/python benchmarks/training-comparison/run_all.py \
@@ -76,7 +60,7 @@ existing reference and bfloat16 run directories, pass:
   --scratch /scratch/dinkster-training-comparison \
   --kohya-repo /scratch/sd-scripts \
   --ai-toolkit-repo /scratch/ai-toolkit \
-  --runs dinkster-fp32-adamw-a dinkster-fp32-adamw-b --overwrite
+  --runs dinkster-adamw-a dinkster-adamw-b --overwrite
 ```
 
 `run_all.py` refuses unpinned reference commits and a model whose SHA-256 does
@@ -90,18 +74,6 @@ the pre-declared expectations:
 /scratch/sd-scripts/venv/bin/python \
   benchmarks/training-comparison/collect_results.py \
   --scratch /scratch/dinkster-training-comparison \
-  --output benchmarks/training-comparison/summary.json \
-  --output-dir benchmarks/training-comparison/results \
-  --environment-output benchmarks/training-comparison/environment.json
-```
-
-After collecting SD1.5, append the SDXL rows with:
-
-```bash
-/scratch/sd-scripts/venv/bin/python \
-  benchmarks/training-comparison/collect_results.py \
-  --family sdxl \
-  --scratch /scratch/dinkster-training-comparison-sdxl \
   --output benchmarks/training-comparison/summary.json \
   --output-dir benchmarks/training-comparison/results \
   --environment-output benchmarks/training-comparison/environment.json
@@ -123,6 +95,10 @@ tokenizer and pipeline files are pinned in `comparison-sdxl.json` and copied to
 New Dinkster runs also include phase-level `torch.cuda.memory_stats` and allocator
 snapshot summaries, known resident tensor sizes, checkpoint-boundary saved
 tensors, and the LoRA forward formulation. The report uses those measurements
-for attribution. The AdamW A runs also replay allocator events from the first
-step and group the live-at-peak allocations by source frame. The snapshot and
+for attribution. The AdamW A run also replays allocator events from the first
+step and groups the live-at-peak allocations by source frame. The snapshot and
 allocator-replay data are not correctness gates.
+
+`REPORT.md`, `comparison-sdxl.json`, and the checked-in SDXL and factored-AdamW
+results are retained as historical benchmark evidence. They are not supported
+by the current smaller SD1.5-only training layer.

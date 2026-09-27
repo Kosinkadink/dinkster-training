@@ -21,3 +21,4 @@ api = "dinkster-api/v1"
 [pack.entry]
 nodes = "dinkster_training_worker.pack:PACK_NODES"
 types = "dinkster_training_worker.pack:register_training_types"
+reservations = "dinkster_training_worker.memory:plan_reservations"

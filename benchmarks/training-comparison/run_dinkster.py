@@ -5,7 +5,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import math
 import os
 import subprocess
 import time
@@ -15,16 +14,8 @@ from pathlib import Path
 from typing import cast
 
 import torch
-from dinkster_training_torch import (
-    CheckpointState,
-    LoraExportSettings,
-    SD15LoRATrainer,
-    SDXLLoRATrainer,
-    TrainingConfig,
-    default_data_source_factory,
-    default_model_factory,
-    export_kohya_lora,
-)
+from dinkster_training_torch import CheckpointState, SD15LoRATrainer, TrainingConfig
+from dinkster_training_torch.export import LoraExportSettings, export_lora
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 
@@ -180,11 +171,6 @@ def main() -> None:
     parser.add_argument("--model", type=Path, required=True)
     parser.add_argument("--dataset", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--optimizer", choices=("adamw", "factored-adamw"), required=True)
-    parser.add_argument("--base-dtype", choices=("float32", "bfloat16"), required=True)
-    parser.add_argument(
-        "--gradient-checkpointing", action=argparse.BooleanOptionalAction, default=True
-    )
     parser.add_argument("--memory-attribution", action="store_true")
     parser.add_argument("--allocator-attribution", action="store_true")
     args = parser.parse_args()
@@ -193,73 +179,41 @@ def main() -> None:
 
     comparison = json.loads(args.comparison.read_text(encoding="utf-8"))
     family = str(comparison.get("family", "sd15"))
-    if family not in ("sd15", "sdxl"):
-        raise ValueError(f"unsupported comparison family: {family}")
+    if family != "sd15":
+        raise ValueError("the current dinkster_comfy training layer supports SD1.5 only")
     model = args.model.resolve()
     model_digest = _sha256(model)
     if model_digest != comparison["model_sha256"]:
         raise ValueError(f"model SHA-256 mismatch: {model_digest}")
     dataset = (args.dataset.resolve() / "1_compare").resolve()
-    source = {"path": str(model), "digest": "sha256:" + model_digest}
-    if family == "sdxl":
-        base_state = source
-        dataset_states = {"checkpointState": source}
-    else:
-        base_state = {**source, "prefix": "model.diffusion_model."}
-        dataset_states = {
-            "vaeState": {**source, "prefix": "first_stage_model."},
-            "textEncoderState": {
-                **source,
-                "prefix": "cond_stage_model.transformer.",
-            },
-        }
     config = TrainingConfig.from_mapping(
         {
             "schemaVersion": 1,
-            "family": family,
-            "baseState": base_state,
+            "family": "sd15",
+            "checkpointPath": str(model),
+            "checkpointDigest": "sha256:" + model_digest,
             "dataset": {
-                "type": "image-caption-folder",
                 "root": str(dataset),
                 "resolution": [comparison["resolution"], comparison["resolution"]],
-                **dataset_states,
+                "encodedCacheRoot": str(args.output / "encoded-cache"),
             },
             "device": "cuda:0",
-            "baseDtype": args.base_dtype,
             "rank": comparison["rank"],
             "alpha": comparison["alpha"],
             "learningRate": comparison["learning_rate"],
             "weightDecay": comparison["weight_decay"],
-            "betas": comparison["betas"],
-            "epsilon": 1e-8,
-            "optimizer": args.optimizer,
+            "batchSize": comparison["batch_size"],
             "gradientAccumulationSteps": comparison["gradient_accumulation_steps"],
-            "gradientCheckpointing": args.gradient_checkpointing,
             "seed": comparison["seed"],
-            "latentShape": [
-                comparison["batch_size"],
-                4,
-                comparison["resolution"] // 8,
-                comparison["resolution"] // 8,
-            ],
-            "contextShape": [comparison["batch_size"], 77, 768 if family == "sd15" else 2048],
-            **({"pooledShape": [comparison["batch_size"], 1280]} if family == "sdxl" else {}),
-            "trainTextEncoder": False,
+            "checkpointInterval": 1,
         }
     )
     torch.use_deterministic_algorithms(True)
-    model = default_model_factory(config)
-    data_source = default_data_source_factory(config)
     memory_attribution: dict[str, object] | None = None
     peak_before_training_reset = {"allocated_bytes": 0, "reserved_bytes": 0}
+    trainer = SD15LoRATrainer(config)
     if args.memory_attribution:
-        memory_attribution = {"phases": {"after_dataset_precompute": _memory_snapshot_summary()}}
-    trainer_type = SDXLLoRATrainer if family == "sdxl" else SD15LoRATrainer
-    trainer = trainer_type(
-        config,
-        model,
-        data_source,
-    )
+        memory_attribution = {"phases": {"after_trainer_load": _memory_snapshot_summary()}}
     if memory_attribution is not None:
         adapter_parameters = list(trainer.attachment.parameters())
         adapter_ids = {id(parameter) for parameter in adapter_parameters}
@@ -277,9 +231,6 @@ def main() -> None:
             "formulation": "base-plus-low-rank-branch",
             "full_effective_weight_bytes_per_unet_forward": 0,
             "target_count": len(trainer.attachment.targets),
-            "targeted_base_parameter_count": sum(
-                target.base_parameter_count for target in trainer.attachment.targets
-            ),
         }
         phases = cast("dict[str, object]", memory_attribution["phases"])
         phases["after_unet_residency"] = _memory_snapshot_summary()
@@ -319,18 +270,22 @@ def main() -> None:
                 record_memory_history(enabled=None)
         torch.cuda.synchronize()
         adapter_parameters = list(trainer.attachment.parameters())
+        latent_elements = (
+            comparison["batch_size"]
+            * 4
+            * (comparison["resolution"] // 8)
+            * (comparison["resolution"] // 8)
+        )
         memory_attribution["checkpoint_boundary_input_bytes"] = (
-            math.prod(config.latent_shape) * 4
-            + config.latent_shape[0] * 8
-            + math.prod(config.context_shape) * 4
-            + (math.prod(config.pooled_shape) * 4 if config.pooled_shape is not None else 0)
-            + (config.latent_shape[0] * 6 * 4 if family == "sdxl" else 0)
+            latent_elements * 4
+            + comparison["batch_size"] * 8
+            + comparison["batch_size"] * 77 * 768 * 4
         )
         memory_attribution["first_step"] = {
             "gradient_bytes": _tensor_bytes(
                 [parameter.grad for parameter in adapter_parameters if parameter.grad is not None]
             ),
-            "optimizer_state_bytes": _optimizer_tensor_bytes(trainer.optimizer_state_dict()),
+            "optimizer_state_bytes": _optimizer_tensor_bytes(trainer.optimizer.state_dict()),
             "peak_allocated_bytes": torch.cuda.max_memory_allocated(),
             "peak_reserved_bytes": torch.cuda.max_memory_reserved(),
             "saved_tensors": saved_tensors.to_mapping(),
@@ -361,22 +316,17 @@ def main() -> None:
         data_cursor=trainer.data_cursor,
         loss=trainer.last_loss,
     )
-    _, export_digest = export_kohya_lora(
+    _, export_digest = export_lora(
         state,
-        config,
         LoraExportSettings(path=export_path, dtype="fp32"),
-        runtime_identity=(
-            "dinkster-sdxl-training-comparison"
-            if family == "sdxl"
-            else "dinkster-training-comparison"
-        ),
+        runtime_identity="dinkster-comfy-training-comparison",
     )
     result = {
         "adapter": str(export_path),
         "adapter_sha256": export_digest.removeprefix("sha256:"),
-        "base_dtype": args.base_dtype,
+        "base_dtype": "float32",
         "deterministic_algorithms": True,
-        "gradient_checkpointing": args.gradient_checkpointing,
+        "gradient_checkpointing": False,
         "losses": losses,
         "max_memory_allocated_bytes": max(
             peak_before_training_reset["allocated_bytes"], torch.cuda.max_memory_allocated()
@@ -384,7 +334,7 @@ def main() -> None:
         "max_memory_reserved_bytes": max(
             peak_before_training_reset["reserved_bytes"], torch.cuda.max_memory_reserved()
         ),
-        "optimizer": args.optimizer,
+        "optimizer": "adamw",
         "runtime_seconds": runtime_seconds,
         "steps": trainer.step_cursor,
         "torch_version": torch.__version__,
@@ -396,6 +346,7 @@ def main() -> None:
     (args.output / "result.json").write_text(
         json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
+    trainer.close()
 
 
 if __name__ == "__main__":

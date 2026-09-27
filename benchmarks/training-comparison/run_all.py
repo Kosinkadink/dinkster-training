@@ -1,4 +1,4 @@
-"""Orchestrate the pinned SD1.5 and SDXL LoRA comparison runs."""
+"""Orchestrate the pinned SD1.5 LoRA comparison runs."""
 
 from __future__ import annotations
 
@@ -19,29 +19,15 @@ MODEL_URLS = {
         "https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/"
         "c36740b77a55ec396ace7c8c26589cdf2b4bc3da/v1-5-pruned-emaonly.safetensors"
     ),
-    "sdxl": (
-        "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/"
-        "462165984030d82259a11f4367a4eed129e94a7b/sd_xl_base_1.0.safetensors"
-    ),
 }
 SD15_RUNS = (
     "dinkster-adamw-a",
     "dinkster-adamw-b",
-    "dinkster-factored",
-    "dinkster-fp32-adamw-a",
-    "dinkster-fp32-adamw-b",
     "kohya-gc",
     "kohya-no-gc",
     "ai-toolkit",
 )
-SDXL_RUNS = (
-    "sdxl-dinkster-adamw-a",
-    "sdxl-dinkster-adamw-b",
-    "sdxl-dinkster-factored",
-    "sdxl-kohya",
-    "sdxl-ai-toolkit",
-)
-RUNS = SD15_RUNS + SDXL_RUNS
+RUNS = SD15_RUNS
 
 
 def _sha256(path: Path) -> str:
@@ -97,8 +83,6 @@ def _dinkster_command(
     model: Path,
     dataset: Path,
     run_root: Path,
-    optimizer: str,
-    base_dtype: str,
     *,
     allocator_attribution: bool,
 ) -> list[str]:
@@ -113,11 +97,6 @@ def _dinkster_command(
         str(dataset),
         "--output",
         str(run_root),
-        "--optimizer",
-        optimizer,
-        "--base-dtype",
-        base_dtype,
-        "--gradient-checkpointing",
         "--memory-attribution",
     ]
     if allocator_attribution:
@@ -298,7 +277,7 @@ def _python_version(python: Path) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--family", choices=("sd15", "sdxl"), default="sd15")
+    parser.add_argument("--family", choices=("sd15",), default="sd15")
     parser.add_argument("--model", type=Path, required=True)
     parser.add_argument("--scratch", type=Path, required=True)
     parser.add_argument("--kohya-repo", type=Path, required=True)
@@ -307,13 +286,11 @@ def main() -> None:
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
 
-    family_runs = SDXL_RUNS if args.family == "sdxl" else SD15_RUNS
-    runs = list(family_runs) if args.runs is None else args.runs
-    unknown_runs = sorted(set(runs) - set(family_runs))
+    runs = list(SD15_RUNS) if args.runs is None else args.runs
+    unknown_runs = sorted(set(runs) - set(SD15_RUNS))
     if unknown_runs:
         parser.error(f"runs do not belong to {args.family}: {', '.join(unknown_runs)}")
-    comparison_name = "comparison-sdxl.json" if args.family == "sdxl" else "comparison.json"
-    comparison_path = HERE / comparison_name
+    comparison_path = HERE / "comparison.json"
     comparison = json.loads(comparison_path.read_text(encoding="utf-8"))
     model = args.model.resolve()
     if model.stat().st_size != comparison["model_bytes"]:
@@ -402,8 +379,6 @@ def main() -> None:
         run_root = scratch / "runs" / name
         _prepare_run(run_root, args.overwrite)
         if "dinkster-" in name:
-            optimizer = "factored-adamw" if name.endswith("-factored") else "adamw"
-            base_dtype = "float32" if name.startswith("dinkster-fp32-") else "bfloat16"
             _monitor(
                 run_root,
                 Path.cwd(),
@@ -412,10 +387,7 @@ def main() -> None:
                     model,
                     dataset,
                     run_root,
-                    optimizer,
-                    base_dtype,
-                    allocator_attribution=name
-                    in ("dinkster-adamw-a", "dinkster-fp32-adamw-a", "sdxl-dinkster-adamw-a"),
+                    allocator_attribution=name == "dinkster-adamw-a",
                 ),
             )
         elif "kohya" in name:

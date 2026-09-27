@@ -12,11 +12,6 @@ dependencies = [
     "safetensors>=0.4.2",
 ]
 
-# The workspace root remains torch-free. Runtime workers install this extra in
-# their dedicated torch environment.
-[project.optional-dependencies]
-torch = ["torch>=2.5"]
-
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

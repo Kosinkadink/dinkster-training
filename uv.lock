@@ -1082,11 +1082,6 @@ dependencies = [
     { name = "safetensors" },
 ]
 
-[package.optional-dependencies]
-torch = [
-    { name = "torch" },
-]
-
 [package.metadata]
 requires-dist = [
     { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
@@ -1095,9 +1090,7 @@ requires-dist = [
     { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
     { name = "pillow", specifier = ">=10" },
     { name = "safetensors", specifier = ">=0.4.2" },
-    { name = "torch", marker = "extra == 'torch'", specifier = ">=2.5" },
 ]
-provides-extras = ["torch"]
 
 [[package]]
 name = "dinkster-training-worker"
@@ -1105,6 +1098,7 @@ version = "0.0.1"
 source = { editable = "packages/dinkster-training-worker" }
 dependencies = [
     { name = "dinkster-api" },
+    { name = "dinkster-memory" },
     { name = "dinkster-nodes-training" },
     { name = "dinkster-server" },
     { name = "dinkster-workers" },
@@ -1112,15 +1106,16 @@ dependencies = [
 
 [package.optional-dependencies]
 sd15-lora = [
-    { name = "dinkster-training-torch", extra = ["torch"] },
+    { name = "dinkster-training-torch" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
+    { name = "dinkster-memory", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-memory&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
     { name = "dinkster-nodes-training", editable = "packages/dinkster-nodes-training" },
     { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
-    { name = "dinkster-training-torch", extras = ["torch"], marker = "extra == 'sd15-lora'", editable = "packages/dinkster-training-torch" },
+    { name = "dinkster-training-torch", marker = "extra == 'sd15-lora'", editable = "packages/dinkster-training-torch" },
     { name = "dinkster-workers", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-workers&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
 ]
 provides-extras = ["sd15-lora"]

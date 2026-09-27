@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections.abc import Mapping
 from pathlib import Path
 
@@ -39,13 +40,13 @@ def create_training_service(
         checkpoint_root = (environment or {}).get("DINKSTER_TRAINING_CHECKPOINT_ROOT")
         if not checkpoint_root:
             raise ValueError(f"DINKSTER_TRAINING_CHECKPOINT_ROOT must be set for {name}")
+        os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
         from dinkster_training_torch import SD15LoRATrainingService
 
         return SD15LoRATrainingService(
             store,
             Path(checkpoint_root),
             cancelled=_invocation_cancelled,
+            expected_device=(environment or {}).get("DINKSTER_TRAINING_DEVICE", "cuda:0"),
         )
-    raise ValueError(
-        f"unknown training backend {name!r}; available backends: fake, sd15-lora"
-    )
+    raise ValueError(f"unknown training backend {name!r}; available backends: fake, sd15-lora")
