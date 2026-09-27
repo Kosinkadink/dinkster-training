@@ -8,10 +8,10 @@ from dinkster_comfy.cli_args import args as _comfy_args
 if not _torch.cuda.is_available():
     _comfy_args.cpu = True
 
-from .attachment import AttachmentError, ComfyBypassAttachment, Target, resolve_targets
 from .checkpoint import CheckpointError, CheckpointState, ContentAddressedCheckpointStore
 from .config import DatasetConfig, TrainingConfig, TrainingConfigError
 from .dataset import EncodedDataset, PreparedBatch
+from .lora_program import LoRAProgram, LoRAProgramError, Target, resolve_targets
 from .service import (
     TRAINING_RUNTIME_IDENTITY,
     TRAINING_SNAPSHOT_DIGEST,
@@ -23,13 +23,13 @@ from .trainer import SD15LoRATrainer
 __all__ = [
     "TRAINING_RUNTIME_IDENTITY",
     "TRAINING_SNAPSHOT_DIGEST",
-    "AttachmentError",
     "CheckpointError",
     "CheckpointState",
-    "ComfyBypassAttachment",
     "ContentAddressedCheckpointStore",
     "DatasetConfig",
     "EncodedDataset",
+    "LoRAProgram",
+    "LoRAProgramError",
     "PreparedBatch",
     "SD15LoRATrainer",
     "SD15LoRATrainingService",

@@ -750,7 +750,7 @@ dependencies = [
 [[package]]
 name = "dinkster-comfy"
 version = "0.1.0"
-source = { git = "https://github.com/Kosinkadink/dinkster-comfy.git?rev=21c85fa1aa9a6c5b42e4c599ae0a1ce717fbc401#21c85fa1aa9a6c5b42e4c599ae0a1ce717fbc401" }
+source = { git = "https://github.com/Kosinkadink/dinkster-comfy.git?rev=6deaf543b990e9101ea8be59b376c45901602912#6deaf543b990e9101ea8be59b376c45901602912" }
 dependencies = [
     { name = "aiohttp" },
     { name = "av" },
@@ -1085,7 +1085,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
-    { name = "dinkster-comfy", git = "https://github.com/Kosinkadink/dinkster-comfy.git?rev=21c85fa1aa9a6c5b42e4c599ae0a1ce717fbc401" },
+    { name = "dinkster-comfy", git = "https://github.com/Kosinkadink/dinkster-comfy.git?rev=6deaf543b990e9101ea8be59b376c45901602912" },
     { name = "dinkster-nodes-training", editable = "packages/dinkster-nodes-training" },
     { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=006de810bd764642d4b0c122e4a9afa9977fba4b" },
     { name = "pillow", specifier = ">=10" },

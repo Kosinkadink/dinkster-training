@@ -1,4 +1,4 @@
-"""Trainable LoRA attachment through dinkster_comfy bypass injections."""
+"""Trainable LoRA resources bound to the dinkster_comfy patch program."""
 
 from __future__ import annotations
 
@@ -9,11 +9,11 @@ from typing import cast
 import torch
 from dinkster_comfy.lora import model_lora_keys_unet
 from dinkster_comfy.model_patcher import ModelPatcher
-from dinkster_comfy.weight_adapter import BypassInjectionManager, LoRAAdapter
+from dinkster_comfy.weight_adapter import LoRAAdapter
 from dinkster_comfy.weight_adapter.lora import LoraDiff
 
 
-class AttachmentError(ValueError):
+class LoRAProgramError(ValueError):
     """The fork model cannot satisfy the requested LoRA target contract."""
 
 
@@ -45,14 +45,14 @@ def resolve_targets(model: torch.nn.Module, patterns: tuple[str, ...]) -> tuple[
         Target(export_stem, model_key) for model_key, export_stem in sorted(by_model_key.items())
     )
     if not targets:
-        raise AttachmentError("the SD1.5 model exposes no requested LoRA targets")
+        raise LoRAProgramError("the SD1.5 model exposes no requested LoRA targets")
     return targets
 
 
-class ComfyBypassAttachment:
-    """Replaceable boundary for the fork's current bypass attachment seam."""
+class LoRAProgram:
+    """Trainable LoRA resources materialized by the model patch program."""
 
-    _INJECTION_KEY = "dinkster-training"
+    _PROGRAM_KEY = "dinkster-training"
 
     def __init__(
         self,
@@ -67,13 +67,12 @@ class ComfyBypassAttachment:
         self._model_patcher = model_patcher
         model = model_patcher.model
         self.targets = resolve_targets(model, target_patterns)
-        self._manager = BypassInjectionManager()
         self._adapters: dict[str, LoraDiff] = {}
         for target in self.targets:
             module = _module(model, target.model_key)
             weight = getattr(module, "weight", None)
             if not isinstance(weight, torch.Tensor) or weight.ndim not in (2, 4):
-                raise AttachmentError(f"LoRA target {target.model_key!r} has no supported weight")
+                raise LoRAProgramError(f"LoRA target {target.model_key!r} has no supported weight")
             devices = [device.index or 0] if device.type == "cuda" else []
             with torch.random.fork_rng(devices=devices):
                 torch.manual_seed(_target_seed(seed, target.model_key))
@@ -82,11 +81,10 @@ class ComfyBypassAttachment:
                 adapter = LoRAAdapter.create_train(weight, rank=rank, alpha=alpha)
             adapter.to(device=device, dtype=torch.float32)
             self._adapters[target.model_key] = adapter
-            self._manager.add_adapter(target.model_key, adapter)
-        injections = self._manager.create_injections(model)
-        if len(self._manager.hooks) != len(self.targets):
-            raise AttachmentError("dinkster_comfy did not attach every requested LoRA target")
-        model_patcher.set_injections(self._INJECTION_KEY, injections)
+        model_patcher.set_bypass_adapters(
+            self._PROGRAM_KEY,
+            {key: (adapter, 1.0) for key, adapter in self._adapters.items()},
+        )
 
     def parameters(self) -> list[torch.nn.Parameter]:
         return [
@@ -111,7 +109,7 @@ class ComfyBypassAttachment:
     def load_state_dict(self, state: dict[str, torch.Tensor]) -> None:
         expected = set(self.state_dict())
         if set(state) != expected:
-            raise AttachmentError(
+            raise LoRAProgramError(
                 f"LoRA checkpoint keys differ: missing={sorted(expected - set(state))}, "
                 f"unknown={sorted(set(state) - expected)}"
             )
@@ -122,9 +120,6 @@ class ComfyBypassAttachment:
 
     def inject(self, device: torch.device) -> torch.nn.Module:
         model = self._model_patcher.patch_model(device_to=device)
-        # The current fork hook chooses its global inference device while
-        # injecting. Restore the training process's governed device until the
-        # patch-program seam supplies an execution-local materialization handle.
         for adapter in self._adapters.values():
             adapter.to(device=device, dtype=torch.float32)
         for parameter in model.parameters():
@@ -135,4 +130,4 @@ class ComfyBypassAttachment:
 
     def close(self) -> None:
         self._model_patcher.unpatch_model(device_to=torch.device("cpu"))
-        self._model_patcher.remove_injections(self._INJECTION_KEY)
+        self._model_patcher.remove_bypass_adapters(self._PROGRAM_KEY)

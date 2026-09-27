@@ -122,7 +122,7 @@ class SD15LoRATrainingService:
             parent_manifest_digest=parent,
             step_cursor=trainer.step_cursor,
             config=config.to_mapping(),
-            adapter=trainer.attachment.state_dict(),
+            adapter=trainer.lora_program.state_dict(),
             optimizer=trainer.optimizer.state_dict(),
             rng=trainer.randomness.state_dict(),
             data_cursor=trainer.data_cursor,

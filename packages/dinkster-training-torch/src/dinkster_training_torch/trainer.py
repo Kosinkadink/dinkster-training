@@ -10,9 +10,9 @@ import torch.nn.functional as functional
 from dinkster_comfy.model_base import BaseModel
 from dinkster_comfy.sd import load_checkpoint_guess_config
 
-from .attachment import ComfyBypassAttachment
 from .config import TrainingConfig
 from .dataset import EncodedDataset, comfy_encoder_factory
+from .lora_program import LoRAProgram
 from .randomness import NamedRandomness
 
 
@@ -43,7 +43,7 @@ class SD15LoRATrainer:
         )
         if model_patcher is None:
             raise ValueError("checkpoint does not contain an SD1.5 diffusion model")
-        self.attachment = ComfyBypassAttachment(
+        self.lora_program = LoRAProgram(
             model_patcher,
             rank=config.rank,
             alpha=config.alpha,
@@ -51,9 +51,9 @@ class SD15LoRATrainer:
             target_patterns=config.target_patterns,
             device=self.device,
         )
-        self.model = cast("BaseModel", self.attachment.inject(self.device))
+        self.model = cast("BaseModel", self.lora_program.inject(self.device))
         self.optimizer = torch.optim.AdamW(
-            self.attachment.parameters(),
+            self.lora_program.parameters(),
             lr=config.learning_rate,
             weight_decay=config.weight_decay,
         )
@@ -72,7 +72,7 @@ class SD15LoRATrainer:
         data_cursor: int,
         loss: float | None,
     ) -> None:
-        self.attachment.load_state_dict(adapter)
+        self.lora_program.load_state_dict(adapter)
         self.optimizer.load_state_dict(optimizer)
         self.randomness.load_state_dict(rng)
         self.step_cursor = step_cursor
@@ -129,5 +129,5 @@ class SD15LoRATrainer:
     def close(self) -> None:
         import dinkster_comfy.model_management as model_management
 
-        self.attachment.close()
+        self.lora_program.close()
         model_management.unload_all_models()
