@@ -1,9 +1,9 @@
-"""SD1.5 LoRA training through dinkster_comfy."""
+"""SD1.5 LoRA training through dinkster_inference."""
 
 import torch as _torch
-from dinkster_comfy.cli_args import args as _comfy_args
+from dinkster_inference.cli_args import args as _comfy_args
 
-# dinkster_comfy selects its device while model_management imports. Training
+# dinkster_inference selects its device while model_management imports. Training
 # owns this process, so select its CPU fallback before importing model modules.
 if not _torch.cuda.is_available():
     _comfy_args.cpu = True

@@ -35,7 +35,7 @@ def _train_once(config_mapping: dict[str, object], output: str, session_id: str)
         export_lora(
             state,
             LoraExportSettings(Path(output), "fp32"),
-            runtime_identity="dinkster-comfy-sd15-lora/1",
+            runtime_identity="dinkster-inference-sd15-lora/1",
         )
     finally:
         trainer.close()

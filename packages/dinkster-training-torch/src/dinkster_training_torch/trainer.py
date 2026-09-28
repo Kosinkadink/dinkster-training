@@ -1,4 +1,4 @@
-"""Cold-loaded SD1.5 LoRA runtime backed by dinkster_comfy."""
+"""Cold-loaded SD1.5 LoRA runtime backed by dinkster_inference."""
 
 from __future__ import annotations
 
@@ -7,8 +7,8 @@ from typing import Protocol, cast
 
 import torch
 import torch.nn.functional as functional
-from dinkster_comfy.model_base import BaseModel
-from dinkster_comfy.sd import load_checkpoint_guess_config
+from dinkster_inference.model_base import BaseModel
+from dinkster_inference.sd import load_checkpoint_guess_config
 
 from .config import TrainingConfig
 from .dataset import EncodedDataset, comfy_encoder_factory
@@ -127,7 +127,7 @@ class SD15LoRATrainer:
         return mean_loss
 
     def close(self) -> None:
-        import dinkster_comfy.model_management as model_management
+        import dinkster_inference.model_management as model_management
 
         self.lora_program.close()
         model_management.unload_all_models()

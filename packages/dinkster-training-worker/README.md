@@ -21,6 +21,6 @@ The model backend is an optional dependency. Install
 Selecting `fake` remains torch-free.
 
 Model residency exists only during a reserved create or advance invocation.
-The worker unloads `dinkster_comfy` models before releasing that invocation's
+The worker unloads `dinkster_inference` models before releasing that invocation's
 reservation; it never reuses an inference worker or retains an unaccounted hot
 model between calls.

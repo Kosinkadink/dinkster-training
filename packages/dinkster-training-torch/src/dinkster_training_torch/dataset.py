@@ -1,4 +1,4 @@
-"""Deterministic image-caption encoding through dinkster_comfy."""
+"""Deterministic image-caption encoding through dinkster_inference."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from torchvision.transforms.functional import pil_to_tensor
 from .config import DatasetConfig, canonical_json
 from .durability import advisory_file_lock, atomic_replace, durable_mkdir
 
-FORK_IDENTITY = "dinkster-comfy@862dca8e70e647b329c1a08c0d42dc653c06c1a8"
+FORK_IDENTITY = "dinkster-inference@8eeb24bd5ef1e217929b699bd5f6b2d6b1b774f7"
 PREPROCESS_IDENTITY = "exif-rgb-center-crop-bilinear-antialias/1"
 _IMAGE_EXTENSIONS = {".bmp", ".jpeg", ".jpg", ".png", ".webp"}
 
@@ -190,8 +190,8 @@ class EncodedDataset:
 
 def comfy_encoder_factory(checkpoint_path: Path) -> EncoderFactory:
     def load() -> tuple[Encoder, Callable[[], None]]:
-        import dinkster_comfy.model_management as model_management
-        from dinkster_comfy.sd import load_checkpoint_guess_config
+        import dinkster_inference.model_management as model_management
+        from dinkster_inference.sd import load_checkpoint_guess_config
 
         _, clip, vae, _ = load_checkpoint_guess_config(
             str(checkpoint_path),

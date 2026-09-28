@@ -180,7 +180,7 @@ def main() -> None:
     comparison = json.loads(args.comparison.read_text(encoding="utf-8"))
     family = str(comparison.get("family", "sd15"))
     if family != "sd15":
-        raise ValueError("the current dinkster_comfy training layer supports SD1.5 only")
+        raise ValueError("the current dinkster_inference training layer supports SD1.5 only")
     model = args.model.resolve()
     model_digest = _sha256(model)
     if model_digest != comparison["model_sha256"]:
@@ -319,7 +319,7 @@ def main() -> None:
     _, export_digest = export_lora(
         state,
         LoraExportSettings(path=export_path, dtype="fp32"),
-        runtime_identity="dinkster-comfy-training-comparison",
+        runtime_identity="dinkster-inference-training-comparison",
     )
     result = {
         "adapter": str(export_path),

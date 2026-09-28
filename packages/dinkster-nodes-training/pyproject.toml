@@ -17,4 +17,4 @@ packages = ["src/dinkster_nodes_training"]
 "src/dinkster_nodes_training" = "dinkster_nodes_training_pack/dinkster_nodes_training"
 
 [tool.uv.sources]
-dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-api" }
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "e4f5ae28f01c6009ff3cdc29503f8d0f990151ba", subdirectory = "packages/dinkster-api" }
