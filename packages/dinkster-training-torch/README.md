@@ -1,6 +1,6 @@
 # dinkster-training-torch
 
-This package provides SD1.5 LoRA training through `dinkster_comfy`. It does
+This package provides SD1.5 LoRA training through `dinkster_inference`. It does
 not contain a second model implementation. The fork owns checkpoint loading,
 VAE and CLIP encoding, the UNet forward pass, bypass attachment, and LoRA key
 mapping.

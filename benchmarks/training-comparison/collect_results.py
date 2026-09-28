@@ -434,7 +434,7 @@ def main() -> None:
         output_runs.update({name: f"results/{name}.json" for name in run_names})
     else:
         configurations = {
-            "dinkster-comfy-float32": _configuration_expectations(
+            "dinkster-inference-float32": _configuration_expectations(
                 results,
                 ("dinkster-adamw-a", "dinkster-adamw-b"),
                 "dinkster-adamw-a",

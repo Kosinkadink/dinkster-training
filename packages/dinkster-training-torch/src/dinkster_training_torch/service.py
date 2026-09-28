@@ -21,8 +21,8 @@ from .config import TrainingConfig
 from .export import LoraExportSettings, export_lora
 from .trainer import SD15LoRATrainer
 
-TRAINING_RUNTIME_IDENTITY = "dinkster-comfy-sd15-lora/1"
-TRAINING_SNAPSHOT_DIGEST = blake3_digest(b"dinkster-comfy-sd15-lora/1")
+TRAINING_RUNTIME_IDENTITY = "dinkster-inference-sd15-lora/1"
+TRAINING_SNAPSHOT_DIGEST = blake3_digest(b"dinkster-inference-sd15-lora/1")
 
 
 class TrainingAdvancePaused(Exception):

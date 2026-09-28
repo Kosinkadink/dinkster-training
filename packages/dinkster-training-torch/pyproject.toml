@@ -1,11 +1,11 @@
 [project]
 name = "dinkster-training-torch"
 version = "0.0.1"
-description = "SD1.5 LoRA training through dinkster-comfy"
+description = "SD1.5 LoRA training through dinkster-inference"
 requires-python = ">=3.12"
 dependencies = [
     "dinkster-api",
-    "dinkster-comfy",
+    "dinkster-inference",
     "dinkster-nodes-training",
     "dinkster-server",
     "pillow>=10",
@@ -20,10 +20,10 @@ build-backend = "hatchling.build"
 packages = ["src/dinkster_training_torch"]
 
 [tool.uv.sources]
-dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-api" }
-dinkster-comfy = { git = "https://github.com/Kosinkadink/dinkster-comfy.git", rev = "862dca8e70e647b329c1a08c0d42dc653c06c1a8" }
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "a91b1e1568fbd05f6431f023f0a25262f9167290", subdirectory = "packages/dinkster-api" }
+dinkster-inference = { git = "https://github.com/Kosinkadink/dinkster-inference.git", rev = "470c4f67d7b68afab9f894bbe69f7cfac5f2a82e" }
 dinkster-nodes-training = { workspace = true }
-dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "006de810bd764642d4b0c122e4a9afa9977fba4b", subdirectory = "packages/dinkster-server" }
+dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "a91b1e1568fbd05f6431f023f0a25262f9167290", subdirectory = "packages/dinkster-server" }
 
 [tool.pyright]
 pythonVersion = "3.12"

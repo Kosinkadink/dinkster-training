@@ -8,14 +8,14 @@ without a compatibility release. The workspace packages are not published as
 stable package-index releases.
 
 This workspace provides Dinkster's first-party training node schemas, durable
-training worker, and LoRA training integration with `dinkster_comfy`. Dinkster
+training worker, and LoRA training integration with `dinkster_inference`. Dinkster
 supplies the graph, protocol, server, and worker foundations; this repository
-pins immutable public Dinkster and `dinkster_comfy` revisions in `uv.lock` and
+pins immutable public Dinkster and `dinkster_inference` revisions in `uv.lock` and
 adds the training-specific packages on top. It contains:
 
 - `dinkster-nodes-training`: graph-facing training nodes and service contract.
 - `dinkster-training-worker`: isolated fake and torch backend selection.
-- `dinkster-training-torch`: SD1.5 model training through `dinkster_comfy`,
+- `dinkster-training-torch`: SD1.5 model training through `dinkster_inference`,
   datasets, checkpoints, and LoRA export.
 - `benchmarks/training-comparison`: retained SD1.5 and SDXL trainer comparisons,
   reports, and collection tools.
@@ -47,7 +47,7 @@ varies by machine.
 | `packages/dinkster-nodes-training` | Implemented | Training node schemas and the service boundary; no torch dependency. |
 | `packages/dinkster-training-worker` with `fake` | Supported for CPU development and CI | Deterministic protocol exerciser only; it does not train a model. |
 | `packages/dinkster-training-worker` with `sd15-lora` | Supported | Requires an explicit checkpoint root, user-supplied model and dataset paths, and the torch runtime package. |
-| SD1.5 LoRA | Supported | Loads, encodes, trains, and exports through `dinkster_comfy`; real training requires user-supplied model assets and suitable hardware. |
+| SD1.5 LoRA | Supported | Loads, encodes, trains, and exports through `dinkster_inference`; real training requires user-supplied model assets and suitable hardware. |
 
 `packages/dinkster-training-torch/README.md` documents the SD1.5 backend's
 configuration, data contract, and artifact requirements.

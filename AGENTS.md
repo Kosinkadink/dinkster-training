@@ -1,6 +1,6 @@
 # dinkster-training guidance
 
-- Use `dinkster_comfy` for model loading, encoding, forward passes, adapter
+- Use `dinkster_inference` for model loading, encoding, forward passes, adapter
   attachment, and LoRA key maps. Do not copy inference numerical or model
   implementations into this repository.
 - Never widen a numerical tolerance to make a test pass.

@@ -46,7 +46,7 @@ def test_package_selects_fork_cpu_before_model_management_import() -> None:
             "-c",
             (
                 "import dinkster_training_torch; "
-                "from dinkster_comfy import model_management; "
+                "from dinkster_inference import model_management; "
                 "assert model_management.get_torch_device().type == 'cpu'"
             ),
         ],
@@ -56,8 +56,8 @@ def test_package_selects_fork_cpu_before_model_management_import() -> None:
 
 
 def test_fork_lora_program_is_trainable_and_ejects() -> None:
-    from dinkster_comfy.lora import load_lora, model_lora_keys_unet
-    from dinkster_comfy.model_patcher import ModelPatcher
+    from dinkster_inference.lora import load_lora, model_lora_keys_unet
+    from dinkster_inference.model_patcher import ModelPatcher
 
     model = _TinyForkModel()
     layer = model.diffusion_model.attn2.to_q

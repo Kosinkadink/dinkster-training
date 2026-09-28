@@ -4,7 +4,7 @@ This harness compares short SD1.5 UNet LoRA runs in Dinkster,
 `kohya-ss/sd-scripts`, and `ostris/ai-toolkit`. It generates a fixed synthetic
 image/caption dataset, runs each trainer with matched settings, records loss and
 CUDA memory, and summarizes the exported adapters without committing model or
-dataset artifacts. The current Dinkster run uses the `dinkster_comfy` checkpoint,
+dataset artifacts. The current Dinkster run uses the `dinkster_inference` checkpoint,
 VAE, CLIP, UNet forward, bypass attachment, and LoRA key map. Its frozen base,
 LoRA masters, gradients, optimizer state, and exports are float32.
 

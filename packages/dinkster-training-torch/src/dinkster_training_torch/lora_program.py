@@ -1,4 +1,4 @@
-"""Trainable LoRA resources bound to the dinkster_comfy patch program."""
+"""Trainable LoRA resources bound to the dinkster_inference patch program."""
 
 from __future__ import annotations
 
@@ -7,10 +7,10 @@ from dataclasses import dataclass
 from typing import cast
 
 import torch
-from dinkster_comfy.lora import model_lora_keys_unet
-from dinkster_comfy.model_patcher import ModelPatcher
-from dinkster_comfy.weight_adapter import LoRAAdapter
-from dinkster_comfy.weight_adapter.lora import LoraDiff
+from dinkster_inference.lora import model_lora_keys_unet
+from dinkster_inference.model_patcher import ModelPatcher
+from dinkster_inference.weight_adapter import LoRAAdapter
+from dinkster_inference.weight_adapter.lora import LoraDiff
 
 
 class LoRAProgramError(ValueError):
