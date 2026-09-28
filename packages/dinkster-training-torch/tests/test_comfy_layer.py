@@ -6,9 +6,9 @@ import sys
 from pathlib import Path
 
 import torch
-from dinkster_training_torch.attachment import ComfyBypassAttachment
 from dinkster_training_torch.config import DatasetConfig
 from dinkster_training_torch.dataset import EncodedDataset, PreparedBatch
+from dinkster_training_torch.lora_program import LoRAProgram
 from PIL import Image
 
 
@@ -55,7 +55,7 @@ def test_package_selects_fork_cpu_before_model_management_import() -> None:
     )
 
 
-def test_fork_bypass_attachment_is_trainable_and_ejects() -> None:
+def test_fork_lora_program_is_trainable_and_ejects() -> None:
     from dinkster_comfy.lora import load_lora, model_lora_keys_unet
     from dinkster_comfy.model_patcher import ModelPatcher
 
@@ -63,7 +63,7 @@ def test_fork_bypass_attachment_is_trainable_and_ejects() -> None:
     layer = model.diffusion_model.attn2.to_q
     patcher = ModelPatcher(model, torch.device("cpu"), torch.device("cpu"))
     original_forward = layer.forward
-    attachment = ComfyBypassAttachment(
+    program = LoRAProgram(
         patcher,
         rank=1,
         alpha=1.0,
@@ -71,15 +71,15 @@ def test_fork_bypass_attachment_is_trainable_and_ejects() -> None:
         target_patterns=("attn2.to_q",),
         device=torch.device("cpu"),
     )
-    attachment.inject(torch.device("cpu"))
+    program.inject(torch.device("cpu"))
     inputs = torch.tensor([[1.0, 2.0, 4.0]])
     output = layer(inputs)
     output.sum().backward()
-    assert all(parameter.grad is not None for parameter in attachment.parameters())
-    assert all(parameter.dtype == torch.float32 for parameter in attachment.parameters())
-    decoded = load_lora(attachment.state_dict(), model_lora_keys_unet(model, {}), log_missing=False)
+    assert all(parameter.grad is not None for parameter in program.parameters())
+    assert all(parameter.dtype == torch.float32 for parameter in program.parameters())
+    decoded = load_lora(program.state_dict(), model_lora_keys_unet(model, {}), log_missing=False)
     assert set(decoded) == {"diffusion_model.attn2.to_q.weight"}
-    attachment.close()
+    program.close()
     assert layer.forward == original_forward
 
 

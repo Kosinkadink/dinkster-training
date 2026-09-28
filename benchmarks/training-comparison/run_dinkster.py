@@ -215,7 +215,7 @@ def main() -> None:
     if args.memory_attribution:
         memory_attribution = {"phases": {"after_trainer_load": _memory_snapshot_summary()}}
     if memory_attribution is not None:
-        adapter_parameters = list(trainer.attachment.parameters())
+        adapter_parameters = list(trainer.lora_program.parameters())
         adapter_ids = {id(parameter) for parameter in adapter_parameters}
         base_parameters = [
             parameter
@@ -230,7 +230,7 @@ def main() -> None:
         memory_attribution["lora_forward"] = {
             "formulation": "base-plus-low-rank-branch",
             "full_effective_weight_bytes_per_unet_forward": 0,
-            "target_count": len(trainer.attachment.targets),
+            "target_count": len(trainer.lora_program.targets),
         }
         phases = cast("dict[str, object]", memory_attribution["phases"])
         phases["after_unet_residency"] = _memory_snapshot_summary()
@@ -269,7 +269,7 @@ def main() -> None:
             if record_memory_history is not None:
                 record_memory_history(enabled=None)
         torch.cuda.synchronize()
-        adapter_parameters = list(trainer.attachment.parameters())
+        adapter_parameters = list(trainer.lora_program.parameters())
         latent_elements = (
             comparison["batch_size"]
             * 4
@@ -310,7 +310,7 @@ def main() -> None:
         parent_manifest_digest="",
         step_cursor=trainer.step_cursor,
         config=config.to_mapping(),
-        adapter=trainer.attachment.state_dict(),
+        adapter=trainer.lora_program.state_dict(),
         optimizer={},
         rng={},
         data_cursor=trainer.data_cursor,

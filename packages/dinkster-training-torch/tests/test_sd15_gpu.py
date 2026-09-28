@@ -26,7 +26,7 @@ def _train_once(config_mapping: dict[str, object], output: str, session_id: str)
             parent_manifest_digest="",
             step_cursor=1,
             config=config.to_mapping(),
-            adapter=trainer.attachment.state_dict(),
+            adapter=trainer.lora_program.state_dict(),
             optimizer=trainer.optimizer.state_dict(),
             rng=trainer.randomness.state_dict(),
             data_cursor=trainer.data_cursor,

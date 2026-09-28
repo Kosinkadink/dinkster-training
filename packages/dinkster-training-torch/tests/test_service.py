@@ -38,7 +38,7 @@ class _Attachment:
 class _FakeTrainer:
     def __init__(self, config: TrainingConfig) -> None:
         self.config = config
-        self.attachment = _Attachment()
+        self.lora_program = _Attachment()
         self.optimizer = _StateOwner({"step": 0})
         self.randomness = _StateOwner({"data": torch.tensor([1], dtype=torch.uint8)})
         self.step_cursor = 0
@@ -55,7 +55,7 @@ class _FakeTrainer:
         data_cursor: int,
         loss: float | None,
     ) -> None:
-        self.attachment.load_state_dict(adapter)
+        self.lora_program.load_state_dict(adapter)
         self.optimizer.load_state_dict(optimizer)
         self.randomness.load_state_dict(rng)
         self.step_cursor = step_cursor
@@ -65,7 +65,7 @@ class _FakeTrainer:
     def train_step(self) -> float:
         self.step_cursor += 1
         self.data_cursor += 1
-        self.attachment.value += 1
+        self.lora_program.value += 1
         self.optimizer.state["step"] = self.step_cursor
         self.last_loss = 1.0 / self.step_cursor
         return self.last_loss

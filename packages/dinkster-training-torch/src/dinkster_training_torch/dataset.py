@@ -19,7 +19,7 @@ from torchvision.transforms.functional import pil_to_tensor
 from .config import DatasetConfig, canonical_json
 from .durability import advisory_file_lock, atomic_replace, durable_mkdir
 
-FORK_IDENTITY = "dinkster-comfy@21c85fa1aa9a6c5b42e4c599ae0a1ce717fbc401"
+FORK_IDENTITY = "dinkster-comfy@862dca8e70e647b329c1a08c0d42dc653c06c1a8"
 PREPROCESS_IDENTITY = "exif-rgb-center-crop-bilinear-antialias/1"
 _IMAGE_EXTENSIONS = {".bmp", ".jpeg", ".jpg", ".png", ".webp"}
 
