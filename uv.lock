@@ -802,7 +802,7 @@ dependencies = [
 [[package]]
 name = "dinkster-inference"
 version = "0.1.0"
-source = { git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=8eeb24bd5ef1e217929b699bd5f6b2d6b1b774f7#8eeb24bd5ef1e217929b699bd5f6b2d6b1b774f7" }
+source = { git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=470c4f67d7b68afab9f894bbe69f7cfac5f2a82e#470c4f67d7b68afab9f894bbe69f7cfac5f2a82e" }
 dependencies = [
     { name = "aiohttp" },
     { name = "av" },
@@ -1085,7 +1085,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
-    { name = "dinkster-inference", git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=8eeb24bd5ef1e217929b699bd5f6b2d6b1b774f7" },
+    { name = "dinkster-inference", git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=470c4f67d7b68afab9f894bbe69f7cfac5f2a82e" },
     { name = "dinkster-nodes-training", editable = "packages/dinkster-nodes-training" },
     { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
     { name = "pillow", specifier = ">=10" },

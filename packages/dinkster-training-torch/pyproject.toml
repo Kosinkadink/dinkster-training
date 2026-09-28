@@ -21,7 +21,7 @@ packages = ["src/dinkster_training_torch"]
 
 [tool.uv.sources]
 dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "a91b1e1568fbd05f6431f023f0a25262f9167290", subdirectory = "packages/dinkster-api" }
-dinkster-inference = { git = "https://github.com/Kosinkadink/dinkster-inference.git", rev = "8eeb24bd5ef1e217929b699bd5f6b2d6b1b774f7" }
+dinkster-inference = { git = "https://github.com/Kosinkadink/dinkster-inference.git", rev = "470c4f67d7b68afab9f894bbe69f7cfac5f2a82e" }
 dinkster-nodes-training = { workspace = true }
 dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "a91b1e1568fbd05f6431f023f0a25262f9167290", subdirectory = "packages/dinkster-server" }
 
