@@ -20,10 +20,10 @@ build-backend = "hatchling.build"
 packages = ["src/dinkster_training_torch"]
 
 [tool.uv.sources]
-dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "e4f5ae28f01c6009ff3cdc29503f8d0f990151ba", subdirectory = "packages/dinkster-api" }
+dinkster-api = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "a91b1e1568fbd05f6431f023f0a25262f9167290", subdirectory = "packages/dinkster-api" }
 dinkster-inference = { git = "https://github.com/Kosinkadink/dinkster-inference.git", rev = "8eeb24bd5ef1e217929b699bd5f6b2d6b1b774f7" }
 dinkster-nodes-training = { workspace = true }
-dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "e4f5ae28f01c6009ff3cdc29503f8d0f990151ba", subdirectory = "packages/dinkster-server" }
+dinkster-server = { git = "https://github.com/Kosinkadink/Dinkster.git", rev = "a91b1e1568fbd05f6431f023f0a25262f9167290", subdirectory = "packages/dinkster-server" }
 
 [tool.pyright]
 pythonVersion = "3.12"
