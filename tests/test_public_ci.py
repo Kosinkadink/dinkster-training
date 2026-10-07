@@ -6,6 +6,12 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT / ".github/workflows/ci.yml"
 
 
+def test_ci_runs_worker_package_tests() -> None:
+    workflow = WORKFLOW.read_text(encoding="utf-8")
+
+    assert "uv run pytest -q tests packages/dinkster-training-worker/tests" in workflow
+
+
 def test_ci_uses_only_hosted_public_dependencies() -> None:
     workflow = WORKFLOW.read_text(encoding="utf-8")
 

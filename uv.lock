@@ -535,14 +535,14 @@ wheels = [
 
 [[package]]
 name = "comfy-kitchen"
-version = "0.2.35"
+version = "0.2.37"
 source = { registry = "https://pypi.org/simple" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/45/9f/0495991518293be6ed02839516ff5140f76dc414d007c78f5e9dcf393038/comfy_kitchen-0.2.35-cp312-abi3-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:33566331e23aa69784bb3730e218241efdca9410937f0a1f51e712818088ec05", size = 26784220, upload-time = "2026-09-17T23:05:13.035Z" },
-    { url = "https://files.pythonhosted.org/packages/8b/c5/13b976741bc3b35f3a7fcded995c5a774dccfe69aee0e792a0381378777c/comfy_kitchen-0.2.35-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:9c59e898101d2657f967910acf6abc6f772d76b945da86c5fda5f7d817d1cda1", size = 47178127, upload-time = "2026-09-17T23:05:15.738Z" },
-    { url = "https://files.pythonhosted.org/packages/d0/f4/180a69b2b6b812f0fad2dfe0d020a773edf774c806bf88537a8043d7f36f/comfy_kitchen-0.2.35-cp312-abi3-win_amd64.whl", hash = "sha256:0d05380b8dade098c4acecf8fed876a0ae0d14cd8a28934a83ab843d7ceb8e16", size = 38542167, upload-time = "2026-09-17T23:05:18.508Z" },
-    { url = "https://files.pythonhosted.org/packages/8a/0b/67eb3acd07774cdce4f161d180e059654c47e2361df665f5e15534226eb9/comfy_kitchen-0.2.35-cp312-abi3-win_arm64.whl", hash = "sha256:17edfa3e09883f36fb475d81302b3467087e1b9399105577c31a3174abc1ded8", size = 6171368, upload-time = "2026-09-17T23:05:20.922Z" },
-    { url = "https://files.pythonhosted.org/packages/14/60/8f075cceb07cb78d3792446b1156b7f5a41b260ac60645ef1483e34f71ce/comfy_kitchen-0.2.35-py3-none-any.whl", hash = "sha256:f95d48638add1a36eed14037820c0f85f0df765321eeb53f0750bef8906abcbe", size = 213513, upload-time = "2026-09-17T23:05:22.162Z" },
+    { url = "https://files.pythonhosted.org/packages/ab/3b/77e68e596cb8097e10753b8095164d07b79b976208da8bde3371ecbfc558/comfy_kitchen-0.2.37-cp312-abi3-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:0f872625af6b3d1f96f18c54b4ef11129df2d9178d28946e1f3d737b8252416d", size = 33278965, upload-time = "2026-10-02T18:26:46.383Z" },
+    { url = "https://files.pythonhosted.org/packages/19/04/d24939d30b077679bfc8bf4a53c7392f9d8650df7ce69164238a673753a1/comfy_kitchen-0.2.37-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:03cca0d10c314aaa13bff8f9422d03974221a344162b23d4f10d27eb2a35d0e8", size = 59238324, upload-time = "2026-10-02T18:26:49.471Z" },
+    { url = "https://files.pythonhosted.org/packages/bf/0a/96c1141180bdc4dce2664cd9316390069c66c6f03e79963a17f252b4b730/comfy_kitchen-0.2.37-cp312-abi3-win_amd64.whl", hash = "sha256:31e1b59351d10374b6351f62a9130712e0cb06c90f059c25522ac1f79249fdb8", size = 48759733, upload-time = "2026-10-02T18:26:52.869Z" },
+    { url = "https://files.pythonhosted.org/packages/3f/e8/cc4ccd684eb3c81ce3bc816ec31d414781c35f020e9811560b8bb79d2b10/comfy_kitchen-0.2.37-cp312-abi3-win_arm64.whl", hash = "sha256:25445cedef6aff9b7d3dea3514dc77ab5b757e729d952dea94f7108a3a70c888", size = 7666973, upload-time = "2026-10-02T18:26:55.46Z" },
+    { url = "https://files.pythonhosted.org/packages/9e/08/0a904ae1a1b82f57e7990eee8d93d48466a185934aa585cc625cdb27761e/comfy_kitchen-0.2.37-py3-none-any.whl", hash = "sha256:b626bd51ff45937f1446accf078ccea9d11c3686ffa0c89b0c1305d66d765afe", size = 232534, upload-time = "2026-10-02T18:26:57.259Z" },
 ]
 
 [[package]]
@@ -673,7 +673,7 @@ nvtx = [
 [[package]]
 name = "dinkster"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "aiohttp" },
     { name = "blake3" },
@@ -693,7 +693,6 @@ dependencies = [
     { name = "dinkster-nodes-image" },
     { name = "dinkster-nodes-remote" },
     { name = "dinkster-nodes-std" },
-    { name = "dinkster-p2p" },
     { name = "dinkster-protocol" },
     { name = "dinkster-registry" },
     { name = "dinkster-schema" },
@@ -708,7 +707,7 @@ dependencies = [
 [[package]]
 name = "dinkster-api"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-assets" },
     { name = "dinkster-inference-wire" },
@@ -722,7 +721,7 @@ dependencies = [
 [[package]]
 name = "dinkster-assets"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-assets&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-assets&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "blake3" },
     { name = "dinkster-values" },
@@ -731,7 +730,7 @@ dependencies = [
 [[package]]
 name = "dinkster-caches"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-caches&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-caches&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-assets" },
     { name = "dinkster-memory" },
@@ -742,7 +741,7 @@ dependencies = [
 [[package]]
 name = "dinkster-collab"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-collab&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-collab&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "aiohttp" },
 ]
@@ -750,7 +749,7 @@ dependencies = [
 [[package]]
 name = "dinkster-compat-comfy"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-compat-comfy&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-compat-comfy&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-assets" },
     { name = "dinkster-graph" },
@@ -771,7 +770,7 @@ dependencies = [
 [[package]]
 name = "dinkster-engine"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-engine&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-engine&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-graph" },
     { name = "dinkster-protocol" },
@@ -782,7 +781,7 @@ dependencies = [
 [[package]]
 name = "dinkster-graph"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-graph&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-graph&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-schema" },
 ]
@@ -790,7 +789,7 @@ dependencies = [
 [[package]]
 name = "dinkster-image-document"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-image-document&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-image-document&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-assets" },
     { name = "dinkster-values" },
@@ -802,7 +801,7 @@ dependencies = [
 [[package]]
 name = "dinkster-inference"
 version = "0.1.0"
-source = { git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=470c4f67d7b68afab9f894bbe69f7cfac5f2a82e#470c4f67d7b68afab9f894bbe69f7cfac5f2a82e" }
+source = { git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=96bdbeabe3c0011934d2f502955758c8f471aa55#96bdbeabe3c0011934d2f502955758c8f471aa55" }
 dependencies = [
     { name = "aiohttp" },
     { name = "av" },
@@ -812,9 +811,11 @@ dependencies = [
     { name = "comfy-kitchen" },
     { name = "einops" },
     { name = "filelock" },
+    { name = "gguf" },
     { name = "kornia" },
     { name = "numpy" },
     { name = "pillow" },
+    { name = "protobuf" },
     { name = "psutil" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
@@ -838,7 +839,7 @@ dependencies = [
 [[package]]
 name = "dinkster-inference-wire"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-inference-wire&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-inference-wire&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "aiohttp" },
     { name = "dinkster-schema" },
@@ -848,7 +849,7 @@ dependencies = [
 [[package]]
 name = "dinkster-memory"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-memory&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-memory&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-values" },
     { name = "psutil" },
@@ -857,7 +858,7 @@ dependencies = [
 [[package]]
 name = "dinkster-native"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-native&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-native&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-assets" },
     { name = "dinkster-graph" },
@@ -877,7 +878,7 @@ dependencies = [
 [[package]]
 name = "dinkster-nodes-dev"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-dev&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-dev&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-api" },
     { name = "numpy" },
@@ -886,7 +887,7 @@ dependencies = [
 [[package]]
 name = "dinkster-nodes-foundation"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-foundation&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-foundation&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-api" },
 ]
@@ -894,7 +895,7 @@ dependencies = [
 [[package]]
 name = "dinkster-nodes-generation"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-generation&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-generation&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-api" },
 ]
@@ -902,7 +903,7 @@ dependencies = [
 [[package]]
 name = "dinkster-nodes-image"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-image&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-image&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "comfy-angle", marker = "platform_machine == 'arm64' or sys_platform != 'darwin'" },
     { name = "dinkster-api" },
@@ -916,7 +917,7 @@ dependencies = [
 [[package]]
 name = "dinkster-nodes-media-io"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-media-io&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-media-io&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "av" },
     { name = "dinkster-api" },
@@ -930,7 +931,7 @@ dependencies = [
 [[package]]
 name = "dinkster-nodes-remote"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-remote&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-remote&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-api" },
     { name = "dinkster-nodes-media-io" },
@@ -941,7 +942,7 @@ dependencies = [
 [[package]]
 name = "dinkster-nodes-std"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-std&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-std&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-nodes-foundation" },
     { name = "dinkster-nodes-image" },
@@ -959,12 +960,12 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" }]
+requires-dist = [{ name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=1a681440c71e3eee7231471c3fead748c4c60d64" }]
 
 [[package]]
 name = "dinkster-nodes-vision"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-vision&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-nodes-vision&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-api" },
     { name = "numpy" },
@@ -973,20 +974,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "dinkster-p2p"
-version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/dinkster-p2p.git?rev=b1e4a30781e20f0073910dd6f35978464f6ee3e3#b1e4a30781e20f0073910dd6f35978464f6ee3e3" }
-dependencies = [
-    { name = "dinkster-assets" },
-    { name = "dinkster-workers" },
-    { name = "libtorrent", marker = "(python_full_version < '3.14' and platform_machine == 'arm64' and platform_python_implementation == 'CPython' and sys_platform == 'darwin') or (python_full_version < '3.14' and platform_machine == 'aarch64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version < '3.14' and platform_machine == 'x86_64' and platform_python_implementation == 'CPython' and sys_platform == 'linux') or (python_full_version < '3.14' and platform_machine == 'AMD64' and platform_python_implementation == 'CPython' and sys_platform == 'win32')" },
-    { name = "psutil" },
-]
-
-[[package]]
 name = "dinkster-protocol"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-protocol&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-protocol&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-schema" },
     { name = "dinkster-values" },
@@ -995,7 +985,7 @@ dependencies = [
 [[package]]
 name = "dinkster-registry"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-registry&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-registry&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "blake3" },
     { name = "dinkster-schema" },
@@ -1005,7 +995,7 @@ dependencies = [
 [[package]]
 name = "dinkster-schema"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-schema&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-schema&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-values" },
 ]
@@ -1013,7 +1003,7 @@ dependencies = [
 [[package]]
 name = "dinkster-server"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "aiohttp" },
     { name = "dinkster-assets" },
@@ -1035,7 +1025,7 @@ dependencies = [
 [[package]]
 name = "dinkster-supervisor"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-supervisor&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-supervisor&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "aiohttp" },
 ]
@@ -1074,21 +1064,27 @@ name = "dinkster-training-torch"
 version = "0.0.1"
 source = { editable = "packages/dinkster-training-torch" }
 dependencies = [
+    { name = "comfy-kitchen" },
     { name = "dinkster-api" },
     { name = "dinkster-inference" },
     { name = "dinkster-nodes-training" },
     { name = "dinkster-server" },
+    { name = "gguf" },
     { name = "pillow" },
+    { name = "protobuf" },
     { name = "safetensors" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
-    { name = "dinkster-inference", git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=470c4f67d7b68afab9f894bbe69f7cfac5f2a82e" },
+    { name = "comfy-kitchen", specifier = "==0.2.37" },
+    { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=1a681440c71e3eee7231471c3fead748c4c60d64" },
+    { name = "dinkster-inference", git = "https://github.com/Kosinkadink/dinkster-inference.git?rev=96bdbeabe3c0011934d2f502955758c8f471aa55" },
     { name = "dinkster-nodes-training", editable = "packages/dinkster-nodes-training" },
-    { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
+    { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=1a681440c71e3eee7231471c3fead748c4c60d64" },
+    { name = "gguf", specifier = ">=0.13" },
     { name = "pillow", specifier = ">=10" },
+    { name = "protobuf", specifier = ">=4.25" },
     { name = "safetensors", specifier = ">=0.4.2" },
 ]
 
@@ -1111,12 +1107,12 @@ sd15-lora = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
-    { name = "dinkster-memory", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-memory&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
+    { name = "dinkster-api", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-api&rev=1a681440c71e3eee7231471c3fead748c4c60d64" },
+    { name = "dinkster-memory", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-memory&rev=1a681440c71e3eee7231471c3fead748c4c60d64" },
     { name = "dinkster-nodes-training", editable = "packages/dinkster-nodes-training" },
-    { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
+    { name = "dinkster-server", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-server&rev=1a681440c71e3eee7231471c3fead748c4c60d64" },
     { name = "dinkster-training-torch", marker = "extra == 'sd15-lora'", editable = "packages/dinkster-training-torch" },
-    { name = "dinkster-workers", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-workers&rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
+    { name = "dinkster-workers", git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-workers&rev=1a681440c71e3eee7231471c3fead748c4c60d64" },
 ]
 provides-extras = ["sd15-lora"]
 
@@ -1137,7 +1133,7 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "dinkster", git = "https://github.com/Kosinkadink/Dinkster.git?rev=a91b1e1568fbd05f6431f023f0a25262f9167290" },
+    { name = "dinkster", git = "https://github.com/Kosinkadink/Dinkster.git?rev=1a681440c71e3eee7231471c3fead748c4c60d64" },
     { name = "pyright", specifier = ">=1.1.390" },
     { name = "pytest", specifier = ">=8" },
     { name = "ruff", specifier = ">=0.8" },
@@ -1146,12 +1142,12 @@ dev = [
 [[package]]
 name = "dinkster-values"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-values&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-values&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 
 [[package]]
 name = "dinkster-video"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-video&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-video&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "av" },
     { name = "dinkster-image-document" },
@@ -1164,7 +1160,7 @@ dependencies = [
 [[package]]
 name = "dinkster-workers"
 version = "0.0.1"
-source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-workers&rev=a91b1e1568fbd05f6431f023f0a25262f9167290#a91b1e1568fbd05f6431f023f0a25262f9167290" }
+source = { git = "https://github.com/Kosinkadink/Dinkster.git?subdirectory=packages%2Fdinkster-workers&rev=1a681440c71e3eee7231471c3fead748c4c60d64#1a681440c71e3eee7231471c3fead748c4c60d64" }
 dependencies = [
     { name = "dinkster-assets" },
     { name = "dinkster-caches" },
@@ -1289,6 +1285,21 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/77/cd/9be253869fc42e764de7f3dedd6969af7d44ff9c3375214a3442a6f3fc08/fsspec-2026.9.0.tar.gz", hash = "sha256:0f08147951c8cb31d844c3547d631053b127863b60be04cf06e121333ee0e2fe", size = 333545, upload-time = "2026-09-18T17:50:42.825Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/6c/c0/a98505f18594f1bce828bb159cec0fcf9860562f1a2c85913409fc8f3d9e/fsspec-2026.9.0-py3-none-any.whl", hash = "sha256:8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f", size = 221738, upload-time = "2026-09-18T17:50:41.341Z" },
+]
+
+[[package]]
+name = "gguf"
+version = "0.19.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pyyaml" },
+    { name = "requests" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/48/ae/17f1308ae45cd7b08ebb521747d5b23f4efc4d172038a4e228dd5106c3ff/gguf-0.19.0.tar.gz", hash = "sha256:dbadcd6cc7ccd44256f2229fe7c2dff5e8aa5cf0612ab987fd2b1a57e428923f", size = 111220, upload-time = "2026-05-06T13:04:03.667Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b3/bb/d71d6da82763528c2c2ed6b59a9d6142c6595545a4c448e2085d155e88c2/gguf-0.19.0-py3-none-any.whl", hash = "sha256:70bcd10edfe697fb2dad6e40af2234b9d8ece9a41a99761405121ebda1c3c1cd", size = 118475, upload-time = "2026-05-06T13:04:02.588Z" },
 ]
 
 [[package]]
@@ -1470,27 +1481,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d7/ce/3155d1d7e8a752b88af31c236a12e1ee18541279f14269e2feb3e35aff10/kornia_rs-0.2.0-cp314-cp314t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e25656994be2b574d9f42e5728113a0e85f68e0390a97a1defeaa7fe2cc265ce", size = 4640165, upload-time = "2026-09-26T20:06:38.427Z" },
     { url = "https://files.pythonhosted.org/packages/17/3c/7d52d1a7a4cdd90c4587224a7d1c59406cd11374f338f192511b2f6e4e12/kornia_rs-0.2.0-cp314-cp314t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:137e65aa359183c3a4794a20f44f3bce61cdb65c49ab04f282bb090aa8de1176", size = 5327042, upload-time = "2026-09-26T20:06:56.14Z" },
     { url = "https://files.pythonhosted.org/packages/c9/b8/5b78344638d79c9b0d108c7c159eca7c861ce7aaff8cc1d9a5ac62b97910/kornia_rs-0.2.0-cp314-cp314t-win_amd64.whl", hash = "sha256:617c04eebe311ddd9ffa5c4fc17ba3acf8a9a1228c38b2346e54fd7753c9f358", size = 4330965, upload-time = "2026-09-26T20:07:58.449Z" },
-]
-
-[[package]]
-name = "libtorrent"
-version = "2.1.1"
-source = { registry = "https://pypi.org/simple" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c2/10/77694ec3f50d3678cf2a7143f380f8a043ee62f653bfce8977ce9b307ea8/libtorrent-2.1.1-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:768375f62631acd298a118d6e4f3e288af8220880d6432a49125f0539ce446d4", size = 7418245, upload-time = "2026-08-10T17:37:49.616Z" },
-    { url = "https://files.pythonhosted.org/packages/f5/78/bad3873f65ba26586cd380a81ed002498e74848db92b0bec1676768c105b/libtorrent-2.1.1-cp312-cp312-macosx_15_0_arm64.whl", hash = "sha256:188aa0f03a2d6e967956a45534cbfd04d81641deb7b92b816e56723fc7ae5078", size = 7372771, upload-time = "2026-08-10T17:37:51.311Z" },
-    { url = "https://files.pythonhosted.org/packages/21/e2/105cab89d59a94bbaaac322bee2f507eda0b5af32756deb333112dfb58a5/libtorrent-2.1.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:580b07d04b30c9d85f73ceaab5184035e815ee4ff3f37ba5b8f887292ae949f1", size = 8423265, upload-time = "2026-08-10T17:37:54.705Z" },
-    { url = "https://files.pythonhosted.org/packages/0c/58/345ed75b4b4d908b488f9c5cf46dad249b3940be1c5ee16c38a5d87f2e85/libtorrent-2.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:90c11511a67c118e2fd6043c717d42663e60da03ab8d4851b2ad5a500a5e0134", size = 8245815, upload-time = "2026-08-10T17:37:56.411Z" },
-    { url = "https://files.pythonhosted.org/packages/f2/96/d623ecc609eafcdaf78e12410b3a81dcd543fc94a73e9db11d59d25524d1/libtorrent-2.1.1-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:08ce0c0275e60ec1aa0d13f46099e41ddc184273af175cc0a7d3812c31bc9134", size = 14159891, upload-time = "2026-08-10T17:37:58.206Z" },
-    { url = "https://files.pythonhosted.org/packages/36/65/0bcc5613669084b5cfe53fa399176a0a6cc809f7319859d95d216677c5b2/libtorrent-2.1.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:0a2bc058e53e11ef38b1dafbdb8595b5a1d6c7881c0b04fd01afae99e2845be5", size = 14301049, upload-time = "2026-08-10T17:38:00.299Z" },
-    { url = "https://files.pythonhosted.org/packages/5a/8f/a262d268098f58f17a221c8b8c632eaf187bc810b4cf2a633937b3c6bd3e/libtorrent-2.1.1-cp312-cp312-win_amd64.whl", hash = "sha256:493954405d15f14b9d9f9b1762ae78e7fecc5a44699f74cb433a9800fa3a7b45", size = 5018631, upload-time = "2026-08-10T17:38:03.893Z" },
-    { url = "https://files.pythonhosted.org/packages/8b/31/e38b29f397ef5ba615136a9ae1c9795d71d3d5856c43c12a20aab058e513/libtorrent-2.1.1-cp313-cp313-macosx_14_0_arm64.whl", hash = "sha256:94767ff3e8bf4fb35cff3f638188ba5ca69dec331bf3b96254289bee635102a1", size = 7418386, upload-time = "2026-08-10T17:38:05.307Z" },
-    { url = "https://files.pythonhosted.org/packages/56/e7/8c92ca04c63f6e909f768dceae64559b9e73ed615a084bc04ca53a3ef60d/libtorrent-2.1.1-cp313-cp313-macosx_15_0_arm64.whl", hash = "sha256:bae8a30fa1b4988881124c76867f8e61f9887a42e55638693d7a1b0038bdebe8", size = 7372882, upload-time = "2026-08-10T17:38:06.77Z" },
-    { url = "https://files.pythonhosted.org/packages/f0/2e/674ea2526d6bf8c3728848eeefc0b66e8ae3cd8d01e67317bac3c005a4ce/libtorrent-2.1.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d456d5c772e64267211eca995f5a61cfa9e476de9494b300b42fd6fdf71675ca", size = 8423724, upload-time = "2026-08-10T17:38:09.887Z" },
-    { url = "https://files.pythonhosted.org/packages/7b/e4/ef1bacf71afb4feba617aebe699ad75e9ae36f025f047fd078df3730c45e/libtorrent-2.1.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c81d768e04915c1627ac108a6abfa64c740bdd1a1634d5fffcdc56ed6e6d915f", size = 8246041, upload-time = "2026-08-10T17:38:11.701Z" },
-    { url = "https://files.pythonhosted.org/packages/8f/bc/d35c775bb7b111623d7402e8c589353642bd0c474a07d50a985aa35612cc/libtorrent-2.1.1-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:f4104e121fd20949ea681abb63377de5dcdbbeda68f0d27ceb074b24877ddaa9", size = 14159928, upload-time = "2026-08-10T17:38:13.604Z" },
-    { url = "https://files.pythonhosted.org/packages/7d/02/42a632b930a61c96a4aed9ca3e451ed61a46ef19ef9d8d31e95772c624ba/libtorrent-2.1.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:98a0cccb5da53e855c8ea6d8b06f190f05de3219732882a1cd2643df15faa22a", size = 14301102, upload-time = "2026-08-10T17:38:15.511Z" },
-    { url = "https://files.pythonhosted.org/packages/f0/2b/b843874837440dadb6d6cde2374a311367efdb40f86375de46cf9a0e59ea/libtorrent-2.1.1-cp313-cp313-win_amd64.whl", hash = "sha256:fa11aa801d5b9184f067f559c465d3074a4e878d9c671b00dd4930d6dfce2b46", size = 5018669, upload-time = "2026-08-10T17:38:19.403Z" },
 ]
 
 [[package]]
@@ -2254,6 +2244,21 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d4/ef/8bae0a316d406644450522f2f3d44a4e19632f5f3bb60d1d0e6c53842616/propcache-0.5.4-cp315-cp315t-win_amd64.whl", hash = "sha256:02c0a34f16889cf800f10f0247a564d8ce6eeab6ffcd7c87198f769067eb8432", size = 48574, upload-time = "2026-09-16T00:17:10.077Z" },
     { url = "https://files.pythonhosted.org/packages/57/be/bcc053f66a97355683884b448198e79580fae8e8fa4d96b9bb01614e9913/propcache-0.5.4-cp315-cp315t-win_arm64.whl", hash = "sha256:dc4242ca653c9b30ab51c5f8193323e7bc0928f897ee9103201e59a43abcb72e", size = 45625, upload-time = "2026-09-16T00:17:11.377Z" },
     { url = "https://files.pythonhosted.org/packages/f5/cd/785c64ed382f3f04201870267b02783f63b4678c2acfddc177a3ebcc2727/propcache-0.5.4-py3-none-any.whl", hash = "sha256:62c60aec739ed00124573cce1178138fd690c7676352d67a37328c1cf51d7468", size = 16338, upload-time = "2026-09-16T00:17:13.106Z" },
+]
+
+[[package]]
+name = "protobuf"
+version = "7.36.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d9/89/5b8517baa72f84a67b8a307ba953c91057af618bf40bf676f3c03551f8f0/protobuf-7.36.2.tar.gz", hash = "sha256:497d0463ff3316681da6c0b9e8d06cb465d61abce00b613ab42226175644d1bb", size = 512737, upload-time = "2026-09-17T20:07:59.326Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/32/72/98342feb672507c8f3a69e34b4fa8961f608edba5c1a48a6f47156d92cb5/protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl", hash = "sha256:cbc70b17ee27e28894c7fee8bb04be1abead49e936bc70eb60052531eee2079e", size = 456039, upload-time = "2026-09-17T20:07:51.542Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/ea/91fdf7c2b8bbd49cde056f00a9df6773532987e1c00fe2830b895af95c7e/protobuf-7.36.2-cp310-abi3-manylinux2014_aarch64.whl", hash = "sha256:e11e1f0180583a2af89db6a2ecd9e8dc40aa6d2988ca175bfd0e6d12ea72d74e", size = 344219, upload-time = "2026-09-17T20:07:52.914Z" },
+    { url = "https://files.pythonhosted.org/packages/17/ab/5fd5f8ece73fad885c5a09aa849b32d70472f954ba3a92d3bb5974ea953b/protobuf-7.36.2-cp310-abi3-manylinux2014_s390x.whl", hash = "sha256:f4fee11ec330d238b34a05c9b675f693c20415d1c5bd7d5320cc2f8a798eb9cf", size = 357223, upload-time = "2026-09-17T20:07:53.985Z" },
+    { url = "https://files.pythonhosted.org/packages/db/f3/3996583dd2906297a637af12114deddf7658af6e683fedb83be061983fb5/protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl", hash = "sha256:89f23aa53c24553a2416fd4fd1ec06f74fa42b14b546d8883128813f775bbfd2", size = 343223, upload-time = "2026-09-17T20:07:54.931Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/1b/dcc64f358fcb51811b58ae40b3d28f820725f116d86487cc20bd4b130701/protobuf-7.36.2-cp310-abi3-win32.whl", hash = "sha256:912c1221170e16c08d1f086762f563dd61ff83c18b5fa6652952dfaded66f728", size = 442998, upload-time = "2026-09-17T20:07:55.826Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/55/b77bda4e5e5f5971fb51b07663694690e9afdb9402136c16a522bd621cad/protobuf-7.36.2-cp310-abi3-win_amd64.whl", hash = "sha256:a300819d441e078a5608c0d3c709796bb548136058fda017ae51d425b44fd353", size = 456514, upload-time = "2026-09-17T20:07:57.188Z" },
+    { url = "https://files.pythonhosted.org/packages/e4/04/d52c7016b04b6c5108f26691f9d33ec82a9b65d041f1a9c771137693d618/protobuf-7.36.2-py3-none-any.whl", hash = "sha256:bdb3a345d48db958e6ce1f18e508beb0cc981d64f24088427549c866cd039f1e", size = 179806, upload-time = "2026-09-17T20:07:58.211Z" },
 ]
 
 [[package]]

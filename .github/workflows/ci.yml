@@ -29,6 +29,6 @@ jobs:
       - run: uv run pyright
       - run: uv run pyright -p packages/dinkster-training-torch
       - name: Test isolated worker and node pack
-        run: uv run pytest -q tests
+        run: uv run pytest -q tests packages/dinkster-training-worker/tests
       - name: Test torch training runtime
         run: uv run pytest -q packages/dinkster-training-torch/tests
