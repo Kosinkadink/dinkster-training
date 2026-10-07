@@ -74,3 +74,8 @@ activity and is not part of hosted CI.
 ## License
 
 This project is licensed under GPL-3.0-or-later. See [LICENSE](LICENSE).
+
+## Security
+
+Report suspected vulnerabilities privately as described in
+[SECURITY.md](SECURITY.md), rather than including sensitive details in a public issue.
