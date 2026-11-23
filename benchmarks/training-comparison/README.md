@@ -11,8 +11,8 @@ LoRA masters, gradients, optimizer state, and exports are float32.
 The runs use 200 optimizer steps, 512x512 images, batch size 1, no gradient
 accumulation, rank/alpha 4, AdamW at 1e-4 with a constant learning rate, and
 UNet-only training. Dinkster uses float32 forward computation. Reference-specific differences
-must be recorded in `REPORT.md`; they must not be hidden by changing the
-expectations after a run.
+must be recorded alongside the run's configs and metadata; they must not be
+hidden by changing the expectations after a run.
 
 ## Pre-declared expectations
 
@@ -37,9 +37,11 @@ These checks were fixed before collecting results:
 ## Setup
 
 Clone each reference outside the Dinkster checkout, pin it to the commit recorded
-in `REPORT.md`, and create its own virtual environment according to its
-installation documentation. Download the exact checkpoint URL and verify the
-byte size and SHA-256 listed in the report.
+in `comparison.json` (`kohya_commit` and `ai_toolkit_commit`), and create its own
+virtual environment according to its installation documentation. Reference URLs
+and the exact checkpoint URL are recorded in the top-level `references` and
+`model` entries of `environment.json`. Verify the checkpoint byte size and
+SHA-256 against `model_bytes` and `model_sha256` in `comparison.json`.
 
 The complete run is:
 
@@ -92,13 +94,6 @@ Exact URLs, byte sizes, and SHA-256 values for the reference tools' auxiliary
 tokenizer and pipeline files are pinned in `comparison-sdxl.json` and copied to
 `environment.json`.
 
-New Dinkster runs also include phase-level `torch.cuda.memory_stats` and allocator
-snapshot summaries, known resident tensor sizes, checkpoint-boundary saved
-tensors, and the LoRA forward formulation. The report uses those measurements
-for attribution. The AdamW A run also replays allocator events from the first
-step and groups the live-at-peak allocations by source frame. The snapshot and
-allocator-replay data are not correctness gates.
-
-`REPORT.md`, `comparison-sdxl.json`, and the checked-in SDXL and factored-AdamW
-results are retained as historical benchmark evidence. They are not supported
-by the current smaller SD1.5-only training layer.
+The checked-in SDXL and factored-AdamW results and `comparison-sdxl.json` are
+historical evidence, not support claims for the current SD1.5-only training
+layer. The current harness does not support those training modes.
